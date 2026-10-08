@@ -669,9 +669,9 @@ export function GlobalPage(){
 }
 
 export const articles=[
-  {slug:'growth-is-a-system',category:'Growth',title:'Growth is a system, not a channel.',summary:'Why isolated marketing activity rarely solves a connected commercial problem.',body:['When growth slows, increasing activity can feel like progress. But more traffic does not repair an unclear proposition, and more leads do not fix an inconsistent sales process.','Start by tracing the complete customer journey: positioning, demand, acquisition, conversion, sales, distribution and retention. Friction in any one stage changes the performance of the stages around it.','A useful diagnosis separates symptoms from constraints. The outcome is a clear set of priorities, with measures that connect each action to a commercial objective.']},
-  {slug:'procurement-beyond-price',category:'Procurement',title:'The quote is not the landed cost.',summary:'A clearer framework for comparing an international sourcing opportunity.',body:['A supplier quotation is a starting point, not a complete procurement decision. Unit cost must be considered alongside freight, duties, inspection, payment terms, lead time and the consequences of failure.','Compare suppliers against the same specification, volume, destination and quality requirements. A lower price for a different requirement is not a like-for-like commercial advantage.','Keep potential savings as an open assessment until supplier qualification, compliance requirements and landed-cost assumptions have been verified.']},
-  {slug:'trust-before-conversion',category:'D2C',title:'Trust comes before conversion.',summary:'Understanding the customer\u2019s hesitation is as important as generating their attention.',body:['Customers do not experience a conversion funnel as a dashboard. They encounter a product, form an impression and decide whether a claim is credible.','Look closely at the questions customers ask before buying. Product clarity, relevance, evidence and delivery expectations can matter more than another promotional incentive.','Acquisition, conversion and retention should reinforce one consistent promise. The strongest growth systems make that promise clear and deliver against it.']}
+  {slug:'growth-is-a-system',category:'Growth',title:'Growth is a system, not a channel.',summary:'Why isolated marketing activity rarely solves a connected commercial problem.',image: leadership,body:['When growth slows, increasing activity can feel like progress. But more traffic does not repair an unclear proposition, and more leads do not fix an inconsistent sales process.','Start by tracing the complete customer journey: positioning, demand, acquisition, conversion, sales, distribution and retention. Friction in any one stage changes the performance of the stages around it.','A useful diagnosis separates symptoms from constraints. The outcome is a clear set of priorities, with measures that connect each action to a commercial objective.']},
+  {slug:'procurement-beyond-price',category:'Procurement',title:'The quote is not the landed cost.',summary:'A clearer framework for comparing an international sourcing opportunity.',image: port,body:['A supplier quotation is a starting point, not a complete procurement decision. Unit cost must be considered alongside freight, duties, inspection, payment terms, lead time and the consequences of failure.','Compare suppliers against the same specification, volume, destination and quality requirements. A lower price for a different requirement is not a like-for-like commercial advantage.','Keep potential savings as an open assessment until supplier qualification, compliance requirements and landed-cost assumptions have been verified.']},
+  {slug:'trust-before-conversion',category:'D2C',title:'Trust comes before conversion.',summary:'Understanding the customer\u2019s hesitation is as important as generating their attention.',image: d2cPackaging,body:['Customers do not experience a conversion funnel as a dashboard. They encounter a product, form an impression and decide whether a claim is credible.','Look closely at the questions customers ask before buying. Product clarity, relevance, evidence and delivery expectations can matter more than another promotional incentive.','Acquisition, conversion and retention should reinforce one consistent promise. The strongest growth systems make that promise clear and deliver against it.']}
 ];
 
 export function InsightsPage(){
@@ -718,7 +718,13 @@ export function InsightsPage(){
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.filter(a=>category==='All'||category===a.category).map(a=>(
               <article className="group flex flex-col bg-card border border-border rounded-[2rem] overflow-hidden hover:border-gold/40 hover:shadow-[0_20px_40px_-15px_rgba(193,155,62,0.15)] hover:-translate-y-2 transition-all duration-500" key={a.slug}>
-                <Link href={`/insights/${a.slug}`} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[240px] flex flex-col justify-between">
+                <Link href={/insights/${a.slug}} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[280px] flex flex-col justify-between">
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0">
+                    <img src={a.image?.src || a.image} alt={a.title} className="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-[#050A18]/70 to-[#050A18]/30"></div>
+                  </div>
+                  
                   {/* Cinematic Gradient / Noise */}
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none origin-bottom-left"></div>
                   
@@ -951,4 +957,5 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
     </Site>
   );
 }
+
 
