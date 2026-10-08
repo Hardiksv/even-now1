@@ -279,7 +279,7 @@ export function ProcurementPage(){
     e.preventDefault();
     setFormValues({...formValues,...Object.fromEntries(new FormData(e.currentTarget).entries())});
     if(step<2)setStep(step+1);
-    else router.push({to:'/thank-you',search:{type:'procurement'}});
+    else router.push('/thank-you?type=procurement');
   }
 
   return (
@@ -468,7 +468,7 @@ export function ContactPage({need=''}:{need?:string}){
               <div className="bg-background rounded-3xl p-8 md:p-12 shadow-xl border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
                 <h2 className="text-3xl font-medium mb-8">Your Details</h2>
                 
-                <form onSubmit={e=>{e.preventDefault();router.push({to:'/thank-you',search:{type:'contact'}});}}>
+                <form onSubmit={e=>{e.preventDefault();router.push('/thank-you?type=contact');}}>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <Field label="Full name" name="name" required/>
                     <Field label="Company" name="company" required/>
@@ -534,6 +534,7 @@ export function ThankYouPage({type}:{type:string}){
     </Site>
   );
 }
+
 
 
 
