@@ -1,4 +1,3 @@
-"use client";
 'use client';
 import { useState, useEffect } from 'react';
 import { ShieldCheck, Award, Factory, Coins, Clock, FileText, MessageSquare, RefreshCw, ChevronRight, Check } from 'lucide-react';

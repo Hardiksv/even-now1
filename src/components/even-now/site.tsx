@@ -1,4 +1,3 @@
-"use client";
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -66,10 +65,8 @@ export function Brand() {
   );
 }
 export function Site({children}:{children:ReactNode}) {
- const [open,setOpen]=useState(false);
- const pathname = usePathname();
- const [isDark,setIsDark]=useState(false);
- useEffect(()=>{setIsDark(document.documentElement.classList.contains('dark'))},[]);
+ const [open,setOpen]=useState(false); const location=useLocation();
+ const [isDark,setIsDark]=useState(()=>document.documentElement.classList.contains('dark'));
  useEffect(()=>setOpen(false),[pathname]);
  const toggleTheme=()=>{const next=!isDark;setIsDark(next);document.documentElement.classList.toggle('dark',next);};
  
@@ -102,7 +99,7 @@ export function Footer() {
             </p>
             
             <Link href="/contact" className="group inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-gold/50 px-8 h-14 rounded-full font-bold tracking-wide transition-all duration-300">
-              Let's start a conversation
+              Let’s start a conversation
               <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-gold transition-all duration-300" size={18}/>
             </Link>
           </div>
@@ -158,7 +155,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-medium tracking-wide">
           <p>© {new Date().getFullYear()} Even Now. All rights reserved.</p>
-
+          <div className="flex items-center gap-3">
+             <span className="w-1.5 h-1.5 rounded-full bg-gold/50"></span>
+             <span>Strategy. Systems. Global opportunity.</span>
+          </div>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
@@ -258,7 +258,7 @@ export function Diagnostics() {
             <h2 className="section-heading text-white">Growth rarely breaks<br/>in one place.</h2>
           </div>
           <p className="section-intro max-w-md text-dark-muted">
-            We don't start with tactics. We start with diagnosis — evaluating the 6 dimensions that determine your commercial performance.
+            We don’t start with tactics. We start with diagnosis — evaluating the 6 dimensions that determine your commercial performance.
           </p>
         </div>
 
@@ -394,7 +394,7 @@ export function Home(){
        
        {/* Beautiful Editorial Image Top */}
        <div className="relative h-64 w-full overflow-hidden">
-        <img src={leadership.src} alt="Business Growth Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        <img src={leadership} alt="Business Growth Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
         
         {/* Floating Glass Meta */}
@@ -409,7 +409,7 @@ export function Home(){
        {/* Content Bottom */}
        <div className="p-8 md:p-10 flex-1 flex flex-col bg-card">
         <h3 className="text-3xl font-medium mb-4 group-hover:text-gold transition-colors">Business Growth</h3>
-        <p className="text-muted-foreground leading-relaxed flex-1 text-sm md:text-base">Find what's holding your business back. Build a growth system that connects positioning, demand, sales, conversion and retention.</p>
+        <p className="text-muted-foreground leading-relaxed flex-1 text-sm md:text-base">Find what’s holding your business back. Build a growth system that connects positioning, demand, sales, conversion and retention.</p>
         
         <div className="flex flex-wrap gap-2 mt-8 mb-8">
          <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 bg-secondary text-foreground rounded-md border border-border/50">Growth Strategy</span>
@@ -427,7 +427,7 @@ export function Home(){
       <Link href="/global-b2b" className="group relative bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-gold/30 transition-all duration-500 flex flex-col">
        
        <div className="relative h-64 w-full overflow-hidden">
-        <img src={port.src} alt="Global B2B & Procurement" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        <img src={port} alt="Global B2B & Procurement" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
         
         <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
@@ -469,7 +469,7 @@ export function Home(){
      <div>
       <Eyebrow>The System Problem</Eyebrow>
       <h2 className="section-heading">Growth rarely breaks<br/>in one place.</h2>
-      <p className="section-intro mt-6">Most growth problems aren't visibility problems — they're system problems. A brand can run more campaigns, post more content, and still leak revenue at the exact same points: unclear positioning, a broken customer journey, a sales process with no follow-through, retention left to chance.</p>
+      <p className="section-intro mt-6">Most growth problems aren’t visibility problems — they’re system problems. A brand can run more campaigns, post more content, and still leak revenue at the exact same points: unclear positioning, a broken customer journey, a sales process with no follow-through, retention left to chance.</p>
       <Link href="/audit" className="text-cta">Find My Growth Leak <ArrowUpRight size={16}/></Link>
      </div>
      <div>
@@ -483,7 +483,7 @@ export function Home(){
        {/* Content */}
        <div className="pt-10">
         <div className="relative navy-image-overlay !rounded-none">
-         <img className="w-full aspect-[4/3] md:aspect-[16/11] object-cover" src={logistics.src} width={1920} height={1024} loading="lazy" alt="Premium representation of global supply chain strategy and market access"/>
+         <img className="w-full aspect-[4/3] md:aspect-[16/11] object-cover" src={logistics} width={1920} height={1024} loading="lazy" alt="Premium representation of global supply chain strategy and market access"/>
         </div>
        </div>
       </div>
@@ -508,6 +508,7 @@ export function Home(){
      </div>
     </Reveal>
    </section>
+
 
    
    <section className="section-space">

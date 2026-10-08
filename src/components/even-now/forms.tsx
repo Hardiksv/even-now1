@@ -1,6 +1,7 @@
-"use client";
+'use client';
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Upload, ShieldCheck, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Site, Intro, Eyebrow } from './site';
@@ -171,7 +172,7 @@ export function AuditPage(){
                       <p className="text-muted-foreground leading-relaxed mb-8">Review your customer journey and commercial measures with a focused growth diagnosis.</p>
                       
                       <div className="flex flex-col sm:flex-row items-center gap-4">
-                        <Link href="/contact" search={{need:'Growth Audit'}} className="group relative flex items-center justify-center gap-3 bg-foreground text-background px-8 h-14 rounded-full font-bold tracking-wide hover:bg-gold hover:text-black transition-all duration-300 w-full sm:w-auto">
+                        <Link href="/contact?need=Growth%20Audit" className="group relative flex items-center justify-center gap-3 bg-foreground text-background px-8 h-14 rounded-full font-bold tracking-wide hover:bg-gold hover:text-black transition-all duration-300 w-full sm:w-auto">
                           <span>Discuss a deeper diagnosis</span>
                           <ArrowUpRight className="group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={18}/>
                         </Link>
@@ -533,4 +534,5 @@ export function ThankYouPage({type}:{type:string}){
     </Site>
   );
 }
+
 
