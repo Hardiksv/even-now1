@@ -718,7 +718,7 @@ export function InsightsPage(){
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.filter(a=>category==='All'||category===a.category).map(a=>(
               <article className="group flex flex-col bg-card border border-border rounded-[2rem] overflow-hidden hover:border-gold/40 hover:shadow-[0_20px_40px_-15px_rgba(193,155,62,0.15)] hover:-translate-y-2 transition-all duration-500" key={a.slug}>
-                <Link href={/insights/${a.slug}} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[280px] flex flex-col justify-between">
+                <Link href={`/insights/${a.slug}`} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[280px] flex flex-col justify-between">
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
                     <img src={a.image?.src || a.image} alt={a.title} className="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" />
