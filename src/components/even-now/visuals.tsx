@@ -510,3 +510,4 @@ export function InsightTypographicCover({ category, title }: { category: string,
   );
 }
 
+

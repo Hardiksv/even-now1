@@ -269,7 +269,7 @@ export function AuditPage(){
 }
 
 export function ProcurementPage(){
-  const navigate=userouter.push();
+  const router = useRouter();
   const [step,setStep]=useState(0);
   const [file,setFile]=useState('');
   const [error,setError]=useState('');
@@ -428,7 +428,7 @@ export function ProcurementPage(){
 }
 
 export function ContactPage({need=''}:{need?:string}){
-  const navigate=userouter.push();
+  const router = useRouter();
   return (
     <Site>
       {/* Cinematic Hero */}
@@ -534,5 +534,6 @@ export function ThankYouPage({type}:{type:string}){
     </Site>
   );
 }
+
 
 

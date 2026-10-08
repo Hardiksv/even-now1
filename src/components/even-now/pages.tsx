@@ -951,3 +951,4 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
   );
 }
 
+
