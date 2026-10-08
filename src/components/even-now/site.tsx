@@ -158,10 +158,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-medium tracking-wide">
           <p>© {new Date().getFullYear()} Even Now. All rights reserved.</p>
-          <div className="flex items-center gap-3">
-             <span className="w-1.5 h-1.5 rounded-full bg-gold/50"></span>
-             <span>Strategy. Systems. Global opportunity.</span>
-          </div>
+
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
