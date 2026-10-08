@@ -1,5 +1,5 @@
-import { HomePage } from '@/components/even-now/pages'
+import { Home } from '@/components/even-now/site'
 
 export default function Page() {
-  return <HomePage />
+  return <Home />
 }

@@ -1,5 +1,2 @@
-import { GlobalB2BPage } from '@/components/even-now/pages'
-
-export default function Page() {
-  return <GlobalB2BPage />
-}
+import { GlobalPage } from '@/components/even-now/pages'
+export default function Page() { return <GlobalPage /> }
