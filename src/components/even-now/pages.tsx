@@ -646,15 +646,15 @@ export function GlobalPage(){
             <CertificationTypographyBadges />
           </div>
 
-          <div className="relative p-10 md:p-14 rounded-[2rem] bg-[#050A18] text-white overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
+          <div className="relative p-10 md:p-14 rounded-[2rem] bg-card border border-border overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none"></div>
             
             <div className="relative z-10 max-w-4xl">
-              <h3 className="text-3xl md:text-4xl font-medium mb-4 text-balance leading-tight text-white">Could India create a procurement advantage for you?</h3>
-              <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl">
+              <h3 className="text-3xl md:text-4xl font-medium mb-4 text-balance leading-tight text-foreground">Could India create a procurement advantage for you?</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
                 Price is only one part of the equation. Freight, duties, quality, lead time, compliance and continuity all affect landed cost. Savings remain to be assessed until the full requirement and commercial terms are understood.
               </p>
-              <Link href="/procurement" className="inline-flex items-center justify-center gap-3 bg-gold text-black px-8 h-14 rounded-full font-bold tracking-wide shadow-xl shadow-gold/20 hover:shadow-[0_0_40px_rgba(193,155,62,0.4)] hover:-translate-y-1 transition-all duration-300 group">
+              <Link href="/procurement" className="inline-flex items-center justify-center gap-3 bg-foreground text-background px-8 h-14 rounded-full font-bold tracking-wide shadow-lg hover:shadow-xl hover:bg-gold hover:text-black hover:-translate-y-1 transition-all duration-300 group">
                 Assess your sourcing opportunity <ArrowUpRight size={20} className="group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
             </div>
