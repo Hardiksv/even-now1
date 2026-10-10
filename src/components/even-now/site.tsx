@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
@@ -67,7 +67,8 @@ export function Brand() {
 }
 export function Site({children}:{children:ReactNode}) {
  const [open,setOpen]=useState(false); const pathname=usePathname();
- const [isDark,setIsDark]=useState(()=>document.documentElement.classList.contains('dark'));
+ const [isDark,setIsDark]=useState(true);
+ useEffect(()=>{ setIsDark(document.documentElement.classList.contains('dark')); }, []);
  useEffect(()=>setOpen(false),[pathname]);
  const toggleTheme=()=>{const next=!isDark;setIsDark(next);document.documentElement.classList.toggle('dark',next);};
  
@@ -163,7 +164,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-medium tracking-wide">
-          <p>© {new Date().getFullYear()} Even Now. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} Even Now. All rights reserved.</p>
           
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
@@ -339,4 +340,5 @@ export function Diagnostics() {
     </section>
   );
 }
+
 
