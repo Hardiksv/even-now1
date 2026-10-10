@@ -358,18 +358,18 @@ export function ApproachSixStageDiagram() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stages.map((s, i) => (
-          <div key={s.name} className="group relative p-8 rounded-3xl bg-card border border-border hover:border-gold/40 shadow-sm hover:shadow-[0_0_40px_rgba(193,155,62,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+          <div key={s.name} className="group relative p-8 rounded-3xl bg-card border border-border hover:border-gold/30 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden flex flex-col h-full">
             {/* Massive subtle watermark number */}
-            <div className="absolute -bottom-4 -right-2 text-9xl font-black text-foreground/[0.03] group-hover:text-gold/[0.05] group-hover:-translate-y-2 group-hover:-translate-x-2 transition-all duration-500 select-none pointer-events-none">
+            <div className="absolute -bottom-6 -right-2 text-9xl font-black text-foreground opacity-5 group-hover:text-gold group-hover:opacity-10 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-all duration-700 ease-out select-none pointer-events-none tracking-tighter">
               0{i + 1}
             </div>
             
-            <div className="relative z-10">
-              <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold/10 text-gold font-bold mb-6 border border-gold/20 group-hover:bg-gold group-hover:text-black transition-colors duration-500">
+            <div className="relative z-10 flex-grow flex flex-col">
+              <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold/10 text-gold font-semibold mb-6 border border-gold/20 group-hover:bg-gold group-hover:text-black transition-colors duration-500 shadow-sm">
                 {i + 1}
               </span>
-              <h4 className="text-2xl font-medium mb-3 text-foreground group-hover:text-gold transition-colors duration-300">{s.name}</h4>
-              <p className="text-muted-foreground leading-relaxed pr-4">{s.desc}</p>
+              <h4 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-gold transition-colors duration-300 tracking-tight">{s.name}</h4>
+              <p className="text-muted-foreground leading-relaxed flex-grow text-[15px] max-w-[85%]">{s.desc}</p>
             </div>
           </div>
         ))}
@@ -509,5 +509,9 @@ export function InsightTypographicCover({ category, title }: { category: string,
     </div>
   );
 }
+
+
+
+
 
 

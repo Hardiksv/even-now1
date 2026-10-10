@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { ArrowRight, ArrowUpRight, Check, Globe2, Settings, Wrench, Leaf, Shirt, Beaker, Package } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ArrowLeft, Check, Globe2, Settings, Wrench, Leaf, Shirt, Beaker, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Site, Intro, Eyebrow, Method, Diagnostics, FinalCTA } from './site';
 import port from '@/assets/commerce-port.jpg';
@@ -23,7 +23,7 @@ export const serviceContent = {
 export function GrowthPage() {
   const c = serviceContent.growth;
   return (
-    <Site>
+    <>
       {/* 1. Bespoke Hero */}
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -54,7 +54,7 @@ export function GrowthPage() {
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border group h-[500px]">
-               <img src={leadership} alt="Business Leadership" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+               <img src={leadership.src} alt="Business Leadership" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
                <div className="absolute bottom-8 left-8 right-8">
                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500">
@@ -134,17 +134,17 @@ export function GrowthPage() {
       <FinalCTA 
         title="A connected system drives measurable growth."
         description="Find the friction in your customer journey."
-        linkhref="/audit"
+        linkTo="/audit"
         linkText="Request a Growth Audit"
       />
-    </Site>
+    </>
   );
 }
 
 export function D2cPage() {
   const c = serviceContent.d2c;
   return (
-    <Site>
+    <>
       {/* 1. Bespoke Hero */}
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -185,11 +185,11 @@ export function D2cPage() {
           <D2CCustomerJourneyDiagram />
           
           <div className="relative mt-16 rounded-3xl overflow-hidden shadow-2xl border border-border group h-[500px]">
-            <img src={d2cPackaging} width={1200} height={600} loading="lazy" alt="Premium D2C luxury packaging" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+            <img src={d2cPackaging.src} width={1200} height={600} loading="lazy" alt="Premium D2C luxury packaging" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
             <div className="absolute bottom-10 left-10">
               <h3 className="text-3xl font-medium text-white mb-3">Premium Brand Positioning</h3>
-              <p className="text-gray-300 text-lg max-w-lg">How product presentation impacts the customer's perceived value and trust before they even checkout.</p>
+              <p className="text-gray-300 text-lg max-w-lg">How product presentation impacts the customer\'s perceived value and trust before they even checkout.</p>
             </div>
           </div>
         </div>
@@ -221,20 +221,20 @@ export function D2cPage() {
       </section>
 
       {/* 4. The Outputs Section */}
-      <section className="section-space bg-[#050A18] text-white">
+      <section className="section-space bg-secondary/30">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Eyebrow className="text-gold justify-center">The Deliverables</Eyebrow>
-            <h2 className="text-4xl md:text-5xl font-medium leading-[1.1]">Clear steps for retention and conversion.</h2>
+            <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] text-foreground">Clear steps for retention and conversion.</h2>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {c.output.map(x=>(
-              <div key={x} className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-gold/30 transition-all duration-300 group shadow-lg">
+              <div key={x} className="flex items-center gap-4 bg-background border border-border rounded-2xl p-6 hover:border-gold/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                 <div className="p-2.5 rounded-full bg-gold/10 text-gold group-hover:scale-110 group-hover:bg-gold group-hover:text-black transition-all shadow-[0_0_15px_rgba(193,155,62,0)] group-hover:shadow-[0_0_15px_rgba(193,155,62,0.3)]">
                   <Check size={18} strokeWidth={3}/>
                 </div>
-                <span className="text-sm font-semibold tracking-wide text-left">{x}</span>
+                <span className="text-sm font-semibold tracking-wide text-left text-foreground">{x}</span>
               </div>
             ))}
           </div>
@@ -245,17 +245,17 @@ export function D2cPage() {
       <FinalCTA 
         title="Turn traffic into a reliable commercial asset."
         description="Map your customer psychology and conversion barriers."
-        linkhref="/audit"
+        linkTo="/audit"
         linkText="Request a D2C Audit"
       />
-    </Site>
+    </>
   );
 }
 
 export function AboutPage() {
   const c = serviceContent.about;
   return (
-    <Site>
+    <>
       {/* 1. Cinematic Hero */}
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -311,7 +311,7 @@ export function AboutPage() {
       </section>
 
       {/* 3. Who we work with */}
-      <section className="section-space bg-[#050A18] text-white">
+      <section className="section-space bg-secondary/30">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -319,19 +319,19 @@ export function AboutPage() {
                 <span className="w-6 h-[1px] bg-gold"></span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Who we work with</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] mb-8">For businesses with a meaningful commercial objective.</h2>
-              <p className="text-lg text-gray-400 leading-relaxed mb-8 border-l-2 border-gold/30 pl-6">
+              <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] mb-8 text-foreground">For businesses with a meaningful commercial objective.</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 border-l-2 border-gold/30 pl-6">
                 We are not a social media agency, a supplier directory or a service that simply forwards contacts. Our focus is diagnosis, qualification and commercially relevant next steps.
               </p>
             </div>
             
             <div className="grid sm:grid-cols-2 gap-4">
               {c.output.map(x=>(
-                <div key={x} className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-gold/30 transition-all duration-300 group shadow-lg">
+                <div key={x} className="flex items-center gap-4 bg-background border border-border rounded-2xl p-5 hover:border-gold/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                   <div className="p-2 rounded-full bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black transition-all">
                     <Check size={16} strokeWidth={3}/>
                   </div>
-                  <span className="text-sm font-semibold tracking-wide">{x}</span>
+                  <span className="text-sm font-semibold tracking-wide text-foreground">{x}</span>
                 </div>
               ))}
             </div>
@@ -341,18 +341,18 @@ export function AboutPage() {
       
       {/* 4. Final CTA */}
       <FinalCTA 
-        title="Let’s discuss your commercial constraints."
+        title="Let's discuss your commercial constraints."
         description="We connect business strategy with commercial execution."
-        linkhref="/contact"
+        linkTo="/contact"
         linkText="Start a Conversation"
       />
-    </Site>
+    </>
   );
 }
 
 export function ApproachPage(){
   return (
-    <Site>
+    <>
       {/* 1. Cinematic Hero */}
       <section className="relative min-h-[85vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/20 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -408,7 +408,7 @@ export function ApproachPage(){
             </div>
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border h-[600px] group">
-              <img src={leadership} alt="Business Strategy Consulting" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" />
+              <img src={leadership.src} alt="Business Strategy Consulting" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-[#050A18]/40 to-transparent"></div>
               <div className="absolute bottom-10 left-10 max-w-sm">
                  <h3 className="text-3xl font-medium text-white mb-3">Systematic Diagnosis</h3>
@@ -488,10 +488,10 @@ export function ApproachPage(){
       <FinalCTA 
         title="Ready to build a connected commercial system?" 
         description="Diagnose the system before you prescribe the solution." 
-        linkhref="/audit" 
+        linkTo="/audit" 
         linkText="Start your diagnosis" 
       />
-    </Site>
+    </>
   );
 }
 
@@ -500,7 +500,7 @@ const continents=['Asia','Europe','North America','South America','Africa','Ocea
 export function GlobalPage(){
   const [continent,setContinent]=useState('Europe');
   return (
-    <Site>
+    <>
       {/* 1. Cinematic Hero */}
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -514,7 +514,7 @@ export function GlobalPage(){
             Source Better. Enter New Markets. Build Globally.
           </h1>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12 text-balance drop-shadow-md">
-            Even Now helps international companies access qualified Indian suppliers, manufacturing capabilities and procurement opportunities — from supplier discovery to commercial negotiation and market access.
+            Even Now helps international companies access qualified Indian suppliers, manufacturing capabilities and procurement opportunities - from supplier discovery to commercial negotiation and market access.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/procurement" className="group relative flex items-center justify-center gap-3 bg-gold text-black px-8 h-14 rounded-full font-bold tracking-wide shadow-xl shadow-gold/20 hover:shadow-[0_0_40px_rgba(193,155,62,0.4)] hover:-translate-y-1 transition-all duration-300 overflow-hidden w-full sm:w-auto">
@@ -522,7 +522,7 @@ export function GlobalPage(){
               <ArrowUpRight className="relative z-10 group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={20}/>
               <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
             </Link>
-            <Link href="/contact" search={{need:'Market Access'}} className="group relative flex items-center justify-center gap-3 bg-white/5 border border-white/20 text-white px-8 h-14 rounded-full font-bold tracking-wide hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
+            <Link href="/contact?need=Market Access" className="group relative flex items-center justify-center gap-3 bg-white/5 border border-white/20 text-white px-8 h-14 rounded-full font-bold tracking-wide hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
               <span>Talk to Our B2B Team</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={18}/>
             </Link>
@@ -536,7 +536,7 @@ export function GlobalPage(){
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border group h-[550px] order-2 lg:order-1">
-               <img src={port} alt="Container ship connecting international trade markets" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+               <img src={port.src} alt="Container ship connecting international trade markets" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
                <div className="absolute bottom-8 left-8 right-8">
                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500">
@@ -645,12 +645,12 @@ export function GlobalPage(){
             <CertificationTypographyBadges />
           </div>
 
-          <div className="relative p-10 md:p-14 rounded-[2rem] bg-[#050A18] text-white overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
+          <div className="relative p-10 md:p-14 rounded-[2rem] bg-white text-foreground overflow-hidden shadow-2xl border border-border">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-white to-white pointer-events-none"></div>
             
             <div className="relative z-10 max-w-4xl">
-              <h3 className="text-3xl md:text-4xl font-medium mb-4 text-balance leading-tight text-white">Could India create a procurement advantage for you?</h3>
-              <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl">
+              <h3 className="text-3xl md:text-4xl font-medium mb-4 text-balance leading-tight text-foreground">Could India create a procurement advantage for you?</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
                 Price is only one part of the equation. Freight, duties, quality, lead time, compliance and continuity all affect landed cost. Savings remain to be assessed until the full requirement and commercial terms are understood.
               </p>
               <Link href="/procurement" className="inline-flex items-center justify-center gap-3 bg-gold text-black px-8 h-14 rounded-full font-bold tracking-wide shadow-xl shadow-gold/20 hover:shadow-[0_0_40px_rgba(193,155,62,0.4)] hover:-translate-y-1 transition-all duration-300 group">
@@ -662,21 +662,21 @@ export function GlobalPage(){
       </section>
 
       {/* 5. Final CTA */}
-      <FinalCTA title="Secure your commercial advantage." description="International sourcing requires capability, compliance, and control." linkhref="/procurement" linkText="Start a Procurement Request" />
-    </Site>
+      <FinalCTA title="Secure your commercial advantage." description="International sourcing requires capability, compliance, and control." linkTo="/procurement" linkText="Start a Procurement Request" />
+    </>
   );
 }
 
 export const articles=[
   {slug:'growth-is-a-system',category:'Growth',title:'Growth is a system, not a channel.',summary:'Why isolated marketing activity rarely solves a connected commercial problem.',body:['When growth slows, increasing activity can feel like progress. But more traffic does not repair an unclear proposition, and more leads do not fix an inconsistent sales process.','Start by tracing the complete customer journey: positioning, demand, acquisition, conversion, sales, distribution and retention. Friction in any one stage changes the performance of the stages around it.','A useful diagnosis separates symptoms from constraints. The outcome is a clear set of priorities, with measures that connect each action to a commercial objective.']},
   {slug:'procurement-beyond-price',category:'Procurement',title:'The quote is not the landed cost.',summary:'A clearer framework for comparing an international sourcing opportunity.',body:['A supplier quotation is a starting point, not a complete procurement decision. Unit cost must be considered alongside freight, duties, inspection, payment terms, lead time and the consequences of failure.','Compare suppliers against the same specification, volume, destination and quality requirements. A lower price for a different requirement is not a like-for-like commercial advantage.','Keep potential savings as an open assessment until supplier qualification, compliance requirements and landed-cost assumptions have been verified.']},
-  {slug:'trust-before-conversion',category:'D2C',title:'Trust comes before conversion.',summary:'Understanding the customer’s hesitation is as important as generating their attention.',body:['Customers do not experience a conversion funnel as a dashboard. They encounter a product, form an impression and decide whether a claim is credible.','Look closely at the questions customers ask before buying. Product clarity, relevance, evidence and delivery expectations can matter more than another promotional incentive.','Acquisition, conversion and retention should reinforce one consistent promise. The strongest growth systems make that promise clear and deliver against it.']}
+  {slug:'trust-before-conversion',category:'D2C',title:'Trust comes before conversion.',summary:'Understanding the customer\'s hesitation is as important as generating their attention.',body:['Customers do not experience a conversion funnel as a dashboard. They encounter a product, form an impression and decide whether a claim is credible.','Look closely at the questions customers ask before buying. Product clarity, relevance, evidence and delivery expectations can matter more than another promotional incentive.','Acquisition, conversion and retention should reinforce one consistent promise. The strongest growth systems make that promise clear and deliver against it.']}
 ];
 
 export function InsightsPage(){
   const [category,setCategory]=useState('All');
   return (
-    <Site>
+    <>
       {/* 1. Cinematic Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -717,7 +717,7 @@ export function InsightsPage(){
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.filter(a=>category==='All'||category===a.category).map(a=>(
               <article className="group flex flex-col bg-card border border-border rounded-[2rem] overflow-hidden hover:border-gold/40 hover:shadow-[0_20px_40px_-15px_rgba(193,155,62,0.15)] hover:-translate-y-2 transition-all duration-500" key={a.slug}>
-                <Link href="/insights/$slug" params={{slug:a.slug}} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[240px] flex flex-col justify-between">
+                <Link href={`/insights/${a.slug}`} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[240px] flex flex-col justify-between">
                   {/* Cinematic Gradient / Noise */}
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none origin-bottom-left"></div>
                   
@@ -736,7 +736,7 @@ export function InsightsPage(){
                 
                 <div className="p-8 flex flex-col flex-grow bg-card">
                   <p className="text-base text-muted-foreground leading-relaxed mb-8 flex-grow">{a.summary}</p>
-                  <Link href="/insights/$slug" params={{slug:a.slug}} className="inline-flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-gold transition-colors mt-auto">
+                  <Link href={`/insights/${a.slug}`} className="inline-flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-gold transition-colors mt-auto">
                     Read Insight <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
                   </Link>
                 </div>
@@ -747,15 +747,15 @@ export function InsightsPage(){
       </section>
       
       {/* 3. Final CTA */}
-      <FinalCTA title="Apply these perspectives to your business." description="Identify what's holding your growth back today." linkhref="/audit" linkText="Request a Growth Audit" />
-    </Site>
+      <FinalCTA title="Apply these perspectives to your business." description="Identify what's holding your growth back today." linkTo="/audit" linkText="Request a Growth Audit" />
+    </>
   );
 }
 
 export function ArticlePage({slug}:{slug:string}){
   const a=articles.find(a=>a.slug===slug);
   return (
-    <Site>
+    <>
       {a ? (
         <>
           {/* Cinematic Article Header */}
@@ -782,7 +782,7 @@ export function ArticlePage({slug}:{slug:string}){
             <div className="max-w-3xl mx-auto">
               
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border mb-16 h-[400px] md:h-[500px]">
-                <img src={leadership} width={1920} height={1024} alt="Executive business strategy and leadership" className="w-full h-full object-cover" loading="lazy" />
+                <img src={leadership.src} width={1920} height={1024} alt="Executive business strategy and leadership" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
               </div>
 
@@ -802,7 +802,7 @@ export function ArticlePage({slug}:{slug:string}){
             </div>
           </article>
 
-          <FinalCTA title="Ready to move beyond the theory?" description="Bring connected commercial thinking to your specific challenge." linkhref="/contact" linkText="Start a Conversation"/>
+          <FinalCTA title="Ready to move beyond the theory?" description="Bring connected commercial thinking to your specific challenge." linkTo="/contact" linkText="Start a Conversation"/>
         </>
       ) : (
         <section className="relative min-h-[60vh] flex items-center bg-[#050A18] overflow-hidden">
@@ -815,14 +815,14 @@ export function ArticlePage({slug}:{slug:string}){
           </div>
         </section>
       )}
-    </Site>
+    </>
   );
 }
 
 export function LegalPage({kind}:{kind:'privacy'|'terms'}){
   const isPrivacy = kind === 'privacy';
   return (
-    <Site>
+    <>
       {/* Cinematic Legal Hero */}
       <section className="relative pt-32 pb-20 bg-[#050A18] overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-[#050A18] to-[#050A18] pointer-events-none"></div>
@@ -947,8 +947,13 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
           </div>
         </div>
       </section>
-    </Site>
+    </>
   );
 }
+
+
+
+
+
 
 

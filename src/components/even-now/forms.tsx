@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -11,7 +11,7 @@ import procurementAudit from '@/assets/procurement-audit.jpg';
 import { ProcurementTenStepTimeline, AuditScoreVisual } from './visuals';
 
 const COUNTRIES = [
-  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "CÃ´te d'Ivoire", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
 ];
 
 function Field({label,name,type='text',required=false,wide=false,options,placeholder,datalist}:{label:string,name:string,type?:string,required?:boolean,wide?:boolean,options?:string[],placeholder?:string,datalist?:string[]}){
@@ -80,7 +80,20 @@ function Field({label,name,type='text',required=false,wide=false,options,placeho
   );
 }
 const stages=['Business information','Business stage','Primary challenge','Current growth','Business problem','Your goal','Timeline','Diagnostic result'];
-const options=[[],['Established and growing','Growth has plateaued','Scaling into new markets','Launching an existing product'],['Unclear positioning','Not enough demand','Low conversion','Inconsistent sales','Low repeat purchases','New market entry'],[],[],[],['Within 30 days','Within 90 days','In 3–6 months','Exploring options']];
+const options=[[],['Established and growing','Growth has plateaued','Scaling into new markets','Launching an existing product'],['Unclear positioning','Not enough demand','Low conversion','Inconsistent sales','Low repeat purchases','New market entry'],[],[],[],['Within 30 days','Within 90 days','In 3-6 months','Exploring options']];
+
+
+const submitForm = async (data: Record<string, string>, formType: string) => {
+  try {
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, formType }),
+    });
+  } catch (error) {
+    console.error('Failed to submit form:', error);
+  }
+};
 
 export function AuditPage(){
   const [step,setStep]=useState(0);
@@ -88,35 +101,39 @@ export function AuditPage(){
   const [selected,setSelected]=useState('');
   const [complete,setComplete]=useState(false);
 
-  const next=(e:FormEvent<HTMLFormElement>)=>{
+  const next=async (e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     const data=Object.fromEntries(new FormData(e.currentTarget).entries());
-    setAnswers(old=>({...old,...Object.fromEntries(Object.entries(data).map(([k,v])=>[k,String(v)])),...(selected?{[stages[step]??'']:selected}:{})}));
-    if(step===6)setComplete(true);
+    const newAnswers = {...answers,...Object.fromEntries(Object.entries(data).map(([k,v])=>[k,String(v)])),...(selected?{[stages[step]??'']:selected}:{})};
+    setAnswers(newAnswers);
     setSelected('');
+    if(step===6) {
+      setComplete(true);
+      await submitForm(newAnswers, 'Audit Form');
+    }
     setStep(Math.min(step+1,7));
   };
   
   const result=diagnose(answers['Primary challenge']??'');
 
   return (
-    <Site>
+    <>
       {/* Cinematic Hero */}
-      <section className="relative min-h-[40vh] flex items-center bg-[#050A18] overflow-hidden pt-32 pb-16 mt-10 border-b border-border/50">
+      <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
-        <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto">
-          <div className="inline-flex items-center gap-4 mb-6">
-            <span className="w-8 h-[1px] bg-gold"></span>
-            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">Business Growth Audit</span>
-            <span className="w-8 h-[1px] bg-gold"></span>
+        <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <span className="w-12 h-[1px] bg-gold/70"></span>
+              <span className="text-xs font-bold tracking-[0.25em] uppercase text-gold">Strategic Diagnostics</span>
+              <span className="w-12 h-[1px] bg-gold/70"></span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight mb-8 text-white text-balance">
+              Where is your growth leaking?
+            </h1>
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+              Identify the exact commercial friction points eroding your conversion. We will pinpoint what deserves deeper attention before you commit to new activity.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-6xl font-medium leading-[1.05] tracking-tight mb-6 text-white">
-            Where is your growth leaking?
-          </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Answer a few questions about your business and we’ll identify the areas that deserve deeper attention before you commit to new activity.
-          </p>
-        </div>
       </section>
 
       <section className="section-space bg-secondary/10">
@@ -125,9 +142,10 @@ export function AuditPage(){
             
             {/* Sticky Sidebar (Progress) */}
             <aside className="lg:w-1/3 shrink-0">
-              <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-xl">
-                <h3 className="text-xl font-bold tracking-tight mb-2 text-gold">A clearer starting point</h3>
-                <p className="text-sm text-muted-foreground mb-8 leading-relaxed">A focused assessment of your commercial challenges and priorities.</p>
+              <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-2xl relative overflow-hidden">
+                <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-gold">Strategic Clarity</h3>
+                  <h2 className="text-3xl font-medium mb-6 leading-tight">A focused assessment of your commercial challenges.</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-10 text-[15px]">Growth is rarely constrained by a lack of ideas; it is constrained by a lack of alignment. Let us map your immediate priorities.</p>
                 
                 <ol className="space-y-6 relative before:absolute before:inset-y-2 before:left-[11px] before:w-[2px] before:bg-border">
                   {stages.map((s,i)=>(
@@ -150,7 +168,7 @@ export function AuditPage(){
             
             {/* Form & Result Container */}
             <div className="lg:w-2/3">
-              <div className="bg-background rounded-3xl p-8 md:p-12 shadow-xl border border-border min-h-[600px] flex flex-col justify-center relative overflow-hidden">
+              <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border min-h-[650px] flex flex-col justify-center relative overflow-hidden">
                 
                 {complete ? (
                   <div className="animate-in fade-in zoom-in-95 duration-700">
@@ -228,7 +246,7 @@ export function AuditPage(){
                           <Field label="Marketing spend range" name="spend" options={['Prefer not to say','Limited investment','Regular investment','Significant investment']}/>
                           <Field label="Marketing team size" name="marketingTeam" type="number"/>
                           <Field label="Sales team size" name="salesTeam" type="number"/>
-                          <Field label="Acquisition channels" name="channels" placeholder="Search, referrals, outbound…" wide required/>
+                          <Field label="Acquisition channels" name="channels" placeholder="Search, referrals, outbound..." wide required/>
                           <Field label="Primary market" name="market" required/>
                           <Field label="Target market" name="targetMarket"/>
                         </div>
@@ -241,7 +259,7 @@ export function AuditPage(){
                       )}
                       {step===5 && (
                         <div className="h-full">
-                           <Field label="What would meaningful progress look like in 6–12 months?" name="goal" type="textarea" required/>
+                           <Field label="What would meaningful progress look like in 6-12 months?" name="goal" type="textarea" required/>
                         </div>
                       )}
                     </div>
@@ -264,7 +282,7 @@ export function AuditPage(){
           </div>
         </div>
       </section>
-    </Site>
+    </>
   );
 }
 
@@ -283,21 +301,21 @@ export function ProcurementPage(){
   }
 
   return (
-    <Site>
+    <>
       {/* Cinematic Hero */}
-      <section className="relative min-h-[40vh] flex items-center bg-[#050A18] overflow-hidden pt-32 pb-16 mt-10 border-b border-border/50">
+      <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto">
           <div className="inline-flex items-center gap-4 mb-6">
             <span className="w-8 h-[1px] bg-gold"></span>
-            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">Indian Sourcing & Procurement</span>
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">Global Sourcing & Procurement Facilitation</span>
             <span className="w-8 h-[1px] bg-gold"></span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-medium leading-[1.05] tracking-tight mb-6 text-white text-balance">
+          <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight mb-6 text-white text-balance">
             Start a Procurement Request.
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Tell us what you need. We’ll assess whether India can provide a commercially viable supply opportunity.
+            Tell us what you need. We will assess commercial viability, landed cost, and supplier capabilities to secure your supply chain advantage.
           </p>
         </div>
       </section>
@@ -312,27 +330,27 @@ export function ProcurementPage(){
             
             {/* Sticky Sidebar */}
             <aside className="lg:w-1/3 shrink-0">
-              <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-xl overflow-hidden relative">
+              <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-2xl relative overflow-hidden overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-3xl rounded-full"></div>
                 <h3 className="text-xl font-bold tracking-tight mb-3 text-gold relative z-10">Requirement first</h3>
                 <h2 className="text-3xl font-medium mb-4 relative z-10 leading-tight">A better assessment starts with better information.</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-8 relative z-10">Specification, quantity, compliance and destination are essential to understanding commercial fit.</p>
                 
                 <div className="relative rounded-2xl overflow-hidden mb-6 group">
-                  <img src={procurementAudit} width={500} height={400} loading="lazy" alt="Corporate B2B consultant reviewing procurement blueprints and technical supply chain data" className="w-full h-64 object-cover object-[center_25%] transform group-hover:scale-110 transition-transform duration-700 grayscale hover:grayscale-0" />
+                  <img src={procurementAudit.src} width={500} height={400} loading="lazy" alt="Corporate B2B consultant reviewing procurement blueprints and technical supply chain data" className="w-full h-64 object-cover object-[center_25%] transform group-hover:scale-110 transition-transform duration-700 grayscale hover:grayscale-0" />
                   <div className="absolute inset-0 bg-gold/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
                 </div>
 
                 <div className="flex gap-4 items-start bg-secondary/30 p-4 rounded-xl border border-border shadow-sm">
                   <ShieldCheck size={24} className="shrink-0 text-gold"/>
-                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">No savings or supplier availability is guaranteed. Landed-cost and certification feasibility remain to be assessed.</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">No savings or supplier availability is guaranteed until a full landed-cost and certification feasibility assessment is complete. Landed-cost and certification feasibility remain to be assessed.</p>
                 </div>
               </div>
             </aside>
             
             {/* Form Panel */}
             <div className="lg:w-2/3">
-              <div className="bg-background rounded-3xl p-8 md:p-12 shadow-xl border border-border min-h-[600px] flex flex-col justify-center overflow-hidden">
+              <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border min-h-[650px] flex flex-col justify-center overflow-hidden">
                 <form onSubmit={advance} className="h-full flex flex-col">
                   
                   <div className="mb-10">
@@ -385,7 +403,7 @@ export function ProcurementPage(){
                           <label className="group flex flex-col items-center justify-center border-2 border-dashed border-border rounded-2xl p-8 hover:border-gold hover:bg-gold/5 transition-colors cursor-pointer relative">
                             <Upload className="mb-3 text-muted-foreground group-hover:text-gold transition-colors" size={28}/>
                             <span className="text-sm font-medium mb-1">{file || 'Click to select a document'}</span>
-                            <span className="text-xs text-muted-foreground">PDF, DOCX or XLSX · up to 10 MB</span>
+                            <span className="text-xs text-muted-foreground">PDF, DOCX or XLSX Â· up to 10 MB</span>
                             <input type="file" accept=".pdf,.docx,.xlsx" className="absolute inset-0 opacity-0 cursor-pointer" onChange={e=>{const f=e.target.files?.[0];if(!f)return;if(f.size>10*1024*1024||!['pdf','docx','xlsx'].includes(f.name.split('.').pop()?.toLowerCase()??'')){setError('Please select a PDF, DOCX or XLSX file smaller than 10 MB.');e.target.value='';setFile('');return}setError('');setFile(f.name)}}/>
                           </label>
                           {error && <span role="alert" className="text-destructive text-sm mt-2 flex items-center gap-2"><ArrowRight size={14}/> {error}</span>}
@@ -423,30 +441,30 @@ export function ProcurementPage(){
           </div>
         </div>
       </section>
-    </Site>
+    </>
   );
 }
 
 export function ContactPage({need=''}:{need?:string}){
   const router = useRouter();
   return (
-    <Site>
+    <>
       {/* Cinematic Hero */}
-      <section className="relative min-h-[40vh] flex items-center bg-[#050A18] overflow-hidden pt-32 pb-16 mt-10 border-b border-border/50">
+      <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
-        <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto">
-          <div className="inline-flex items-center gap-4 mb-6">
-            <span className="w-8 h-[1px] bg-gold"></span>
-            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">Talk to Even Now</span>
-            <span className="w-8 h-[1px] bg-gold"></span>
+        <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <span className="w-12 h-[1px] bg-gold/70"></span>
+              <span className="text-xs font-bold tracking-[0.25em] uppercase text-gold">Consulting Inquiries</span>
+              <span className="w-12 h-[1px] bg-gold/70"></span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight mb-8 text-white text-balance">
+              Let us solve your commercial friction.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+              Whether it is global procurement, D2C growth, or operational scaling-start with the challenge that matters most to your bottom line.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-6xl font-medium leading-[1.05] tracking-tight mb-6 text-white text-balance">
-            Let’s talk about the problem you’re trying to solve.
-          </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Business growth, procurement or a new market. Start with the commercial challenge that matters to you.
-          </p>
-        </div>
       </section>
 
       <section className="section-space bg-secondary/10">
@@ -455,20 +473,27 @@ export function ContactPage({need=''}:{need?:string}){
             
             {/* Sticky Sidebar */}
             <aside className="lg:w-1/3 shrink-0">
-              <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-xl overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-3xl rounded-full"></div>
-                <h3 className="text-xl font-bold tracking-tight mb-3 text-gold relative z-10">A purposeful conversation</h3>
-                <h2 className="text-3xl font-medium mb-6 relative z-10 leading-tight">Start with context.<br/>Build toward clarity.</h2>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-10 relative z-10">Share your business, your requirement and what a useful outcome would look like. We’ll review the information and determine the relevant next step.</p>
-              </div>
-            </aside>
+                <div className="sticky top-32 p-10 rounded-3xl bg-card text-foreground border border-border shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-gold/10 blur-3xl rounded-full"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-gold">A purposeful conversation</h3>
+                    <h2 className="text-3xl font-medium mb-6 leading-tight">Start with context.<br/>Build toward clarity.</h2>
+                    <p className="text-muted-foreground leading-relaxed mb-10 text-[15px]">Share your business context, your requirement, and what a successful commercial outcome would look like. We will review the information and propose a pragmatic next step.</p>
+                  </div>
+                </div>
+              </aside>
             
             {/* Form Panel */}
             <div className="lg:w-2/3">
-              <div className="bg-background rounded-3xl p-8 md:p-12 shadow-xl border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <h2 className="text-3xl font-medium mb-8">Your Details</h2>
+              <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border animate-in fade-in slide-in-from-bottom-8 duration-700 min-h-[650px] flex flex-col justify-center">
+                  <h2 className="text-3xl md:text-4xl font-medium mb-10 text-balance">Your Details</h2>
                 
-                <form onSubmit={e=>{e.preventDefault();router.push('/thank-you?type=contact');}}>
+                <form onSubmit={async (e)=>{
+                    e.preventDefault();
+                    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+                    await submitForm(data as Record<string, string>, 'Contact Form');
+                    router.push('/thank-you?type=contact');
+                  }}>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <Field label="Full name" name="name" required/>
                     <Field label="Company" name="company" required/>
@@ -505,13 +530,13 @@ export function ContactPage({need=''}:{need?:string}){
           </div>
         </div>
       </section>
-    </Site>
+    </>
   );
 }
 
 export function ThankYouPage({type}:{type:string}){
   return (
-    <Site>
+    <>
       <section className="relative min-h-[70vh] flex items-center bg-[#050A18] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 max-w-2xl mx-auto text-center animate-in fade-in zoom-in-95 duration-1000">
@@ -531,9 +556,26 @@ export function ThankYouPage({type}:{type:string}){
           </Link>
         </div>
       </section>
-    </Site>
+    </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
