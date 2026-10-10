@@ -1,4 +1,4 @@
-// @ts-ignore - CSS module declarations are provided by Next.js at project level.
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Site } from '@/components/even-now/site'

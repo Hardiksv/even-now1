@@ -10,12 +10,11 @@ export default function Page(){
  return (
     <>
    <section className="relative min-h-[90vh] md:min-h-[800px] flex items-center bg-[#050A18] overflow-hidden isolate">
-    {/* Background Network Animation */}
+    
     <div className="absolute inset-0 z-0 opacity-80">
       <HeroNetworkAnimation />
     </div>
-    
-    {/* Cinematic Gradient Overlays for Text Legibility */}
+
     <div className="absolute inset-0 bg-gradient-to-r from-[#050A18] via-[#050A18]/80 to-transparent z-0 pointer-events-none"></div>
     <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-transparent z-0 pointer-events-none"></div>
     
@@ -62,15 +61,13 @@ export default function Page(){
      </div>
      
      <div className="grid md:grid-cols-2 gap-8">
-      {/* Engine 1 */}
+      
       <Link href="/growth" className="group relative bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-gold/30 transition-all duration-500 flex flex-col">
-       
-       {/* Beautiful Editorial Image Top */}
+
        <div className="relative h-64 w-full overflow-hidden">
         <img src={leadership.src} alt="Business Growth Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
-        
-        {/* Floating Glass Meta */}
+
         <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
           <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold shadow-lg group-hover:scale-110 transition-transform duration-500">
             <ChartNoAxesCombined size={22}/>
@@ -79,7 +76,6 @@ export default function Page(){
         </div>
        </div>
 
-       {/* Content Bottom */}
        <div className="p-8 md:p-10 flex-1 flex flex-col bg-card">
         <h3 className="text-3xl font-medium mb-4 group-hover:text-gold transition-colors">Business Growth</h3>
         <p className="text-muted-foreground leading-relaxed flex-1 text-sm md:text-base">Find what's holding your business back. Build a growth system that connects positioning, demand, sales, conversion and retention.</p>
@@ -96,7 +92,6 @@ export default function Page(){
        </div>
       </Link>
 
-      {/* Engine 2 */}
       <Link href="/global-b2b" className="group relative bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-gold/30 transition-all duration-500 flex flex-col">
        
        <div className="relative h-64 w-full overflow-hidden">
@@ -147,13 +142,13 @@ export default function Page(){
      </div>
      <div>
       <div className="relative rounded-xl overflow-hidden border border-black/10 bg-[#f5f5f7] shadow-2xl dark:border-white/10 group">
-       {/* macOS Title Bar */}
+       
        <div className="h-10 w-full bg-[#f5f5f7]/95 backdrop-blur-md flex items-center px-4 gap-2 absolute top-0 left-0 right-0 z-20 border-b border-black/10">
         <div className="w-3 h-3 rounded-full bg-[#FF5F56] border border-black/10"></div>
         <div className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-black/10"></div>
         <div className="w-3 h-3 rounded-full bg-[#27C93F] border border-black/10"></div>
        </div>
-       {/* Content */}
+       
        <div className="pt-10">
         <div className="relative navy-image-overlay !rounded-none">
          <img className="w-full aspect-[4/3] md:aspect-[16/11] object-cover" src={logistics.src} width={1920} height={1024} loading="lazy" alt="Premium representation of global supply chain strategy and market access"/>
@@ -182,8 +177,6 @@ export default function Page(){
     </Reveal>
    </section>
 
-
-   
    <section className="section-space">
     <div className="container-shell mb-10">
      <div className="relative rounded-2xl overflow-hidden bg-card border border-border shadow-xl p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
@@ -212,18 +205,7 @@ export default function Page(){
     </div>
    </section>
 
-  
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
 

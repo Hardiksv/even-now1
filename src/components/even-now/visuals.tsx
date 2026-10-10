@@ -2,10 +2,6 @@
 import { useState, useEffect } from 'react';
 import { ShieldCheck, Award, Factory, Coins, Clock, FileText, MessageSquare, RefreshCw, ChevronRight, Check } from 'lucide-react';
 
-/**
- * 1. HOME HERO ANIMATED NETWORK NODES
- * Interactive canvas/SVG animated node network for Hero section (No photos).
- */
 export function HeroNetworkAnimation() {
   const nodes = [
     { id: 'pos', label: 'Positioning', x: 20, y: 35, gold: true },
@@ -34,7 +30,6 @@ export function HeroNetworkAnimation() {
           </linearGradient>
         </defs>
 
-        {/* Connecting Lines */}
         {edges.map(([fromId, toId], i) => {
           const from = nodes.find(n => n.id === fromId)!;
           const to = nodes.find(n => n.id === toId)!;
@@ -54,7 +49,6 @@ export function HeroNetworkAnimation() {
           );
         })}
 
-        {/* Nodes */}
         {nodes.map(n => (
           <g key={n.id} className="transition-transform duration-700 hover:scale-125">
             <circle
@@ -75,7 +69,6 @@ export function HeroNetworkAnimation() {
         ))}
       </svg>
 
-      {/* Floating HTML Labels */}
       <div className="absolute inset-0 pointer-events-none hidden md:block">
         {nodes.map(n => (
           <div
@@ -95,9 +88,6 @@ export function HeroNetworkAnimation() {
   );
 }
 
-/**
- * 2. TWO ENGINES VISUAL A - ABSTRACT GROWTH FUNNEL
- */
 export function TwoEnginesAbstractFunnel() {
   return (
     <div className="w-full h-44 my-5 relative rounded-xl border border-gold/30 bg-[#050A18] p-5 flex flex-col justify-between overflow-hidden group shadow-inner">
@@ -113,28 +103,22 @@ export function TwoEnginesAbstractFunnel() {
             <stop offset="100%" stopColor="#C19B3E" stopOpacity="0.0" />
           </linearGradient>
         </defs>
-        
-        {/* Background Grid Lines */}
+
         <line x1="0" y1="20" x2="300" y2="20" stroke="#1E293B" strokeWidth="0.5" strokeDasharray="3 3"/>
         <line x1="0" y1="50" x2="300" y2="50" stroke="#1E293B" strokeWidth="0.5" strokeDasharray="3 3"/>
         <line x1="0" y1="80" x2="300" y2="80" stroke="#1E293B" strokeWidth="0.5" strokeDasharray="3 3"/>
 
-        {/* Funnel Guidelines */}
         <path d="M10 15 L100 40 L200 48 L290 75" stroke="#334155" strokeWidth="1" strokeDasharray="2 2"/>
         <path d="M10 75 L100 48 L200 40 L290 15" stroke="#334155" strokeWidth="1" strokeDasharray="2 2"/>
-        
-        {/* Growth Curve Fill */}
+
         <path d="M10 65 Q 90 25, 160 58 T 290 15 L 290 85 L 10 85 Z" fill="url(#funnelGrad)"/>
 
-        {/* Glowing Trendline */}
         <path d="M10 65 Q 90 25, 160 58 T 290 15" stroke="#C19B3E" strokeWidth="2.5" fill="none"/>
 
-        {/* Key Nodes */}
         <circle cx="10" cy="65" r="3.5" fill="#94A3B8"/>
         <circle cx="160" cy="58" r="4" fill="#C19B3E"/>
         <circle cx="290" cy="15" r="4.5" fill="#C19B3E"/>
 
-        {/* Floating Labels with exact Anchoring */}
         <text x="10" y="52" fill="#94A3B8" fontSize="8" fontWeight="600">POSITIONING</text>
         <text x="160" y="44" fill="#C19B3E" fontSize="8" fontWeight="700" textAnchor="middle">CONVERSION</text>
         <text x="290" y="26" fill="#C19B3E" fontSize="8" fontWeight="700" textAnchor="end">REVENUE UNLOCK</text>
@@ -148,17 +132,13 @@ export function TwoEnginesAbstractFunnel() {
   );
 }
 
-/**
- * 2. TWO ENGINES VISUAL B - GLOBAL B2B FACTORY & SUPPLY
- */
 export function TwoEnginesFactoryVisual({ factoryImg }: { factoryImg: string }) {
   return (
     <div className="w-full h-44 my-5 relative rounded-xl border border-gold/30 bg-[#050A18] overflow-hidden group shadow-inner flex flex-col justify-between p-5">
-      {/* Background Image with Overlay */}
+      
       <img src={factoryImg} alt="Precision manufacturing & automated industrial factory" className="absolute inset-0 w-full h-full object-cover filter saturate-[0.85] contrast-[1.1] transition-transform duration-700 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-[#050A18]/65 to-[#050A18]/45" />
 
-      {/* Top Header Overlay */}
       <div className="flex justify-between items-center z-10 relative">
         <span className="text-[10px] uppercase tracking-widest text-gold font-bold bg-[#050A18]/80 backdrop-blur-md px-2 py-0.5 rounded border border-gold/30">
           GLOBAL SUPPLY ENGINE
@@ -168,7 +148,6 @@ export function TwoEnginesFactoryVisual({ factoryImg }: { factoryImg: string }) 
         </span>
       </div>
 
-      {/* Center Sourcing Indicator */}
       <div className="z-10 relative my-auto">
         <div className="inline-flex items-center gap-2 bg-[#050A18]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-gold/40 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-gold animate-ping"/>
@@ -176,7 +155,6 @@ export function TwoEnginesFactoryVisual({ factoryImg }: { factoryImg: string }) 
         </div>
       </div>
 
-      {/* Bottom Footer Overlay */}
       <div className="flex justify-between items-center text-[10px] text-gray-300 z-10 relative border-t border-white/20 pt-2">
         <span>Verified Sourcing & RFQ</span>
         <span className="text-gold font-semibold">Landed Cost Feasibility</span>
@@ -185,9 +163,6 @@ export function TwoEnginesFactoryVisual({ factoryImg }: { factoryImg: string }) 
   );
 }
 
-/**
- * 3. PROBLEM SECTION LEAK FLOW DIAGRAM
- */
 export function SystemProblemLeakDiagram() {
   const steps = [
     { name: 'Positioning', leak: false },
@@ -226,20 +201,16 @@ export function SystemProblemLeakDiagram() {
   );
 }
 
-/**
- * 5. GLOBAL B2B WORLD MAP SVG
- */
 export function GlobalMapSVG() {
   return (
     <div className="relative w-full h-full min-h-[350px] rounded-xl overflow-hidden border border-black/10 bg-[#f5f5f7] shadow-2xl flex flex-col">
-      {/* macOS Title Bar */}
+      
       <div className="h-10 w-full bg-[#f5f5f7]/95 backdrop-blur-md flex items-center px-4 gap-2 border-b border-black/10 shrink-0 z-20">
         <div className="w-3 h-3 rounded-full bg-[#FF5F56] border border-black/10"></div>
         <div className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-black/10"></div>
         <div className="w-3 h-3 rounded-full bg-[#27C93F] border border-black/10"></div>
       </div>
 
-      {/* Content */}
       <div className="relative flex-1 bg-[#080E20] p-6 md:p-8 flex flex-col justify-between overflow-hidden">
         <div className="flex justify-between items-start md:items-center flex-col md:flex-row gap-4 z-10">
           <div>
@@ -252,9 +223,8 @@ export function GlobalMapSVG() {
           </div>
         </div>
 
-      {/* Abstract Map Nodes SVG */}
       <svg className="w-full h-auto flex-1 my-6 drop-shadow-lg" viewBox="0 0 600 240" fill="none">
-        {/* World Grid Lines */}
+        
         <line x1="0" y1="60" x2="600" y2="60" stroke="#1E293B" strokeWidth="0.5"/>
         <line x1="0" y1="120" x2="600" y2="120" stroke="#1E293B" strokeWidth="0.5"/>
         <line x1="0" y1="180" x2="600" y2="180" stroke="#1E293B" strokeWidth="0.5"/>
@@ -262,34 +232,28 @@ export function GlobalMapSVG() {
         <line x1="300" y1="0" x2="300" y2="240" stroke="#1E293B" strokeWidth="0.5"/>
         <line x1="450" y1="0" x2="450" y2="240" stroke="#1E293B" strokeWidth="0.5"/>
 
-        {/* India (Hub) */}
         <g>
           <circle cx="450" cy="140" r="10" fill="#C19B3E" fillOpacity="0.3" className="animate-pulse"/>
           <circle cx="450" cy="140" r="5" fill="#C19B3E"/>
           <text x="450" y="165" fill="#C19B3E" fontSize="11" textAnchor="middle" fontWeight="bold">INDIA (HUB)</text>
         </g>
 
-        {/* Europe */}
         <circle cx="280" cy="80" r="4.5" fill="#94A3B8"/>
         <text x="280" y="65" fill="#94A3B8" fontSize="10" textAnchor="middle">Europe</text>
         <path d="M450 140 Q 360 90, 280 80" stroke="#C19B3E" strokeWidth="1.5" strokeDasharray="4 4"/>
 
-        {/* North America */}
         <circle cx="80" cy="90" r="4.5" fill="#94A3B8"/>
         <text x="80" y="75" fill="#94A3B8" fontSize="10" textAnchor="middle">North America</text>
         <path d="M450 140 Q 250 60, 80 90" stroke="#C19B3E" strokeWidth="1.5" strokeDasharray="4 4"/>
 
-        {/* Middle East & Africa */}
         <circle cx="350" cy="150" r="4.5" fill="#94A3B8"/>
         <text x="350" y="170" fill="#94A3B8" fontSize="10" textAnchor="middle">Middle East</text>
         <path d="M450 140 L 350 150" stroke="#C19B3E" strokeWidth="1.5" strokeDasharray="4 4"/>
 
-        {/* East Asia */}
         <circle cx="540" cy="90" r="4.5" fill="#94A3B8"/>
         <text x="540" y="75" fill="#94A3B8" fontSize="10" textAnchor="middle">East Asia</text>
         <path d="M450 140 Q 500 100, 540 90" stroke="#C19B3E" strokeWidth="1.5" strokeDasharray="4 4"/>
 
-        {/* Oceania */}
         <circle cx="550" cy="200" r="4.5" fill="#94A3B8"/>
         <text x="550" y="215" fill="#94A3B8" fontSize="10" textAnchor="middle">Oceania</text>
         <path d="M450 140 Q 510 170, 550 200" stroke="#C19B3E" strokeWidth="1.5" strokeDasharray="4 4"/>
@@ -303,9 +267,6 @@ export function GlobalMapSVG() {
   );
 }
 
-/**
- * 6. BUYER PRIORITIES GRID (8 Cards with icons)
- */
 export function BuyerPrioritiesGrid() {
   const priorities = [
     { title: 'Quality Assurance', desc: 'Strict inspection against technical drawing specifications.', icon: ShieldCheck },
@@ -337,9 +298,6 @@ export function BuyerPrioritiesGrid() {
   );
 }
 
-/**
- * 7. APPROACH PAGE - 6 STAGE HORIZONTAL SYSTEM DIAGRAM
- */
 export function ApproachSixStageDiagram() {
   const stages = [
     { name: 'Discover', desc: 'Understand business model, customer needs & constraints.' },
@@ -359,7 +317,7 @@ export function ApproachSixStageDiagram() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stages.map((s, i) => (
           <div key={s.name} className="group relative p-8 rounded-3xl bg-card border border-border hover:border-gold/30 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden flex flex-col h-full">
-            {/* Massive subtle watermark number */}
+            
             <div className="absolute -bottom-6 -right-2 text-9xl font-black text-foreground opacity-5 group-hover:text-gold group-hover:opacity-10 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-all duration-700 ease-out select-none pointer-events-none tracking-tighter">
               0{i + 1}
             </div>
@@ -378,9 +336,6 @@ export function ApproachSixStageDiagram() {
   );
 }
 
-/**
- * 10. TYPOGRAPHY CERTIFICATION CARDS
- */
 export function CertificationTypographyBadges() {
   const badges = [
     { name: 'ISO 9001 / 14001', detail: 'Quality & Environmental Management Systems', icon: ShieldCheck },
@@ -409,9 +364,6 @@ export function CertificationTypographyBadges() {
   );
 }
 
-/**
- * 11. PROCUREMENT 10-STEP TIMELINE
- */
 export function ProcurementTenStepTimeline() {
   const steps = [
     'Requirement', 'Research', 'Qualification', 'RFQ', 'Compare',
@@ -433,9 +385,6 @@ export function ProcurementTenStepTimeline() {
   );
 }
 
-/**
- * 12. D2C CUSTOMER JOURNEY DIAGRAM
- */
 export function D2CCustomerJourneyDiagram() {
   const stages = [
     { title: 'Notice', desc: 'Brand Positioning & Awareness' },
@@ -461,9 +410,6 @@ export function D2CCustomerJourneyDiagram() {
   );
 }
 
-/**
- * 13. AUDIT RESULT DIAGNOSTIC SCORE MATRIX (UI ONLY - NO PHOTO)
- */
 export function AuditScoreVisual({ primary, secondary, risk }: { primary: string, secondary: string, risk: string }) {
   return (
     <div className="my-6 p-6 rounded-xl border border-gold/40 bg-midnight text-on-dark">
@@ -494,9 +440,6 @@ export function AuditScoreVisual({ primary, secondary, risk }: { primary: string
   );
 }
 
-/**
- * 15. INSIGHT TYPOGRAPHIC COVER
- */
 export function InsightTypographicCover({ category, title }: { category: string, title: string }) {
   return (
     <div className="w-full h-48 rounded-lg bg-midnight border border-border p-6 flex flex-col justify-between relative overflow-hidden group hover:border-gold transition-colors">
@@ -509,9 +452,4 @@ export function InsightTypographicCover({ category, title }: { category: string,
     </div>
   );
 }
-
-
-
-
-
 

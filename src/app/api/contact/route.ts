@@ -5,7 +5,6 @@ export async function POST(req: Request) {
   try {
     const data = await req.json();
 
-    // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: Number(process.env.SMTP_PORT) || 587,
@@ -16,7 +15,6 @@ export async function POST(req: Request) {
       },
     });
 
-    // Format the email content
     let htmlContent = "<h2>New Contact Form Submission</h2>";
     htmlContent += "<table style='width: 100%; border-collapse: collapse;'>";
     for (const [key, value] of Object.entries(data)) {
@@ -26,7 +24,6 @@ export async function POST(req: Request) {
     }
     htmlContent += "</table>";
 
-    // Send mail
     const info = await transporter.sendMail({
       from: '"Even Now Website" <' + process.env.SMTP_USER + '>',
       to: process.env.RECEIVER_EMAIL || process.env.SMTP_USER,

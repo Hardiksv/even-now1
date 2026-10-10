@@ -24,7 +24,7 @@ export function GrowthPage() {
   const c = serviceContent.growth;
   return (
     <>
-      {/* 1. Bespoke Hero */}
+      
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
@@ -49,7 +49,6 @@ export function GrowthPage() {
         </div>
       </section>
 
-      {/* 2. Editorial Split with Image */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -105,7 +104,6 @@ export function GrowthPage() {
         </div>
       </section>
 
-      {/* 3. The Outputs Section */}
       <section className="section-space bg-secondary/20 text-foreground">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -129,8 +127,7 @@ export function GrowthPage() {
           </div>
         </div>
       </section>
-      
-      {/* 4. Final CTA */}
+
       <FinalCTA 
         title="A connected system drives measurable growth."
         description="Find the friction in your customer journey."
@@ -145,7 +142,7 @@ export function D2cPage() {
   const c = serviceContent.d2c;
   return (
     <>
-      {/* 1. Bespoke Hero */}
+      
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
@@ -170,7 +167,6 @@ export function D2cPage() {
         </div>
       </section>
 
-      {/* 2. Customer Journey Diagram & Packaging Image */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -195,7 +191,6 @@ export function D2cPage() {
         </div>
       </section>
 
-      {/* 3. Analysis Bento Grid */}
       <section className="section-space bg-background border-b border-border/50">
         <div className="container-shell">
           <div className="flex items-center gap-4 mb-6">
@@ -220,7 +215,6 @@ export function D2cPage() {
         </div>
       </section>
 
-      {/* 4. The Outputs Section */}
       <section className="section-space bg-secondary/30">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -240,8 +234,7 @@ export function D2cPage() {
           </div>
         </div>
       </section>
-      
-      {/* 5. Final CTA */}
+
       <FinalCTA 
         title="Turn traffic into a reliable commercial asset."
         description="Map your customer psychology and conversion barriers."
@@ -256,7 +249,7 @@ export function AboutPage() {
   const c = serviceContent.about;
   return (
     <>
-      {/* 1. Cinematic Hero */}
+      
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
@@ -281,7 +274,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Beliefs Grid */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -310,7 +302,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* 3. Who we work with */}
       <section className="section-space bg-secondary/30">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -338,8 +329,7 @@ export function AboutPage() {
           </div>
         </div>
       </section>
-      
-      {/* 4. Final CTA */}
+
       <FinalCTA 
         title="Let's discuss your commercial constraints."
         description="We connect business strategy with commercial execution."
@@ -353,11 +343,10 @@ export function AboutPage() {
 export function ApproachPage(){
   return (
     <>
-      {/* 1. Cinematic Hero */}
+      
       <section className="relative min-h-[85vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/20 via-[#050A18] to-[#050A18] pointer-events-none"></div>
-        
-        {/* Abstract animated grid background */}
+
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]"></div>
 
         <div className="container-shell relative z-10 w-full max-w-5xl mx-auto text-center">
@@ -382,7 +371,6 @@ export function ApproachPage(){
         </div>
       </section>
 
-      {/* 2. Core Philosophy - Editorial Split */}
       <section className="section-space bg-background border-b border-border/50">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -419,7 +407,6 @@ export function ApproachPage(){
         </div>
       </section>
 
-      {/* 3. The Methodology Diagram */}
       <section className="section-space bg-secondary/30 border-b border-border/50">
         <div className="container-shell">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -440,9 +427,8 @@ export function ApproachPage(){
         </div>
       </section>
 
-      {/* 4. Diagnostic Capabilities - Premium Bento Grid */}
       <section className="section-space bg-secondary/20 relative overflow-hidden">
-        {/* Subtle glow in background */}
+        
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
         
         <div className="container-shell relative z-10">
@@ -484,7 +470,6 @@ export function ApproachPage(){
         </div>
       </section>
 
-      {/* 5. Final CTA */}
       <FinalCTA 
         title="Ready to build a connected commercial system?" 
         description="Diagnose the system before you prescribe the solution." 
@@ -501,7 +486,7 @@ export function GlobalPage(){
   const [continent,setContinent]=useState('Europe');
   return (
     <>
-      {/* 1. Cinematic Hero */}
+      
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
@@ -530,7 +515,6 @@ export function GlobalPage(){
         </div>
       </section>
 
-      {/* 2. Editorial Split with Image */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -558,8 +542,7 @@ export function GlobalPage(){
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                 The right supply opportunity must fit your product, specifications, certification requirements, volume and destination market. We evaluate landed-cost feasibility before commitment.
               </p>
-              
-              {/* Continent Switcher UI */}
+
               <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
                 <p className="text-sm font-medium mb-4 text-foreground">Select your destination market:</p>
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -590,7 +573,6 @@ export function GlobalPage(){
         </div>
       </section>
 
-      {/* 3. Supplier Capabilities - Premium Bento Grid */}
       <section className="section-space bg-secondary/20">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -613,7 +595,7 @@ export function GlobalPage(){
               { icon: Package, title: 'Machinery & Packaging', desc: 'Deploy heavy-duty industrial solutions and resilient packaging designed for complex global supply chains.' }
             ].map(item => (
               <div key={item.title} className="bg-card border border-border shadow-sm rounded-3xl p-8 hover:shadow-2xl hover:border-gold/40 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                 {/* Background subtle glow */}
+                 
                  <div className="absolute top-0 right-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl group-hover:bg-gold/10 transition-colors duration-500 pointer-events-none"></div>
                  
                  <div className="relative z-10 w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-8 group-hover:scale-110 group-hover:bg-gold group-hover:text-black transition-all duration-500">
@@ -627,7 +609,6 @@ export function GlobalPage(){
         </div>
       </section>
 
-      {/* 4. Certification & Quality */}
       <section className="section-space bg-background border-b border-border/50">
         <div className="container-shell">
           <div className="max-w-3xl mb-12">
@@ -661,7 +642,6 @@ export function GlobalPage(){
         </div>
       </section>
 
-      {/* 5. Final CTA */}
       <FinalCTA title="Secure your commercial advantage." description="International sourcing requires capability, compliance, and control." linkTo="/procurement" linkText="Start a Procurement Request" />
     </>
   );
@@ -677,7 +657,7 @@ export function InsightsPage(){
   const [category,setCategory]=useState('All');
   return (
     <>
-      {/* 1. Cinematic Hero */}
+      
       <section className="relative min-h-[60vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
@@ -695,11 +675,9 @@ export function InsightsPage(){
         </div>
       </section>
 
-      {/* 2. Insights Grid */}
       <section className="section-space bg-secondary/20">
         <div className="container-shell">
-          
-          {/* Category Filters */}
+
           <div className="flex gap-3 flex-wrap mb-16 justify-center max-w-4xl mx-auto">
             {['All','Growth','Consumer Psychology','B2B','Market Access','Procurement','Sales','Strategy','D2C','International Trade'].map(x=>(
               <button 
@@ -712,13 +690,12 @@ export function InsightsPage(){
               </button>
             ))}
           </div>
-          
-          {/* Article Cards - Premium Editorial Layout */}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.filter(a=>category==='All'||category===a.category).map(a=>(
               <article className="group flex flex-col bg-card border border-border rounded-[2rem] overflow-hidden hover:border-gold/40 hover:shadow-[0_20px_40px_-15px_rgba(193,155,62,0.15)] hover:-translate-y-2 transition-all duration-500" key={a.slug}>
                 <Link href={`/insights/${a.slug}`} className="block relative overflow-hidden bg-[#050A18] p-8 min-h-[240px] flex flex-col justify-between">
-                  {/* Cinematic Gradient / Noise */}
+                  
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none origin-bottom-left"></div>
                   
                   <div className="relative z-10 flex justify-between items-start mb-12">
@@ -745,8 +722,7 @@ export function InsightsPage(){
           </div>
         </div>
       </section>
-      
-      {/* 3. Final CTA */}
+
       <FinalCTA title="Apply these perspectives to your business." description="Identify what's holding your growth back today." linkTo="/audit" linkText="Request a Growth Audit" />
     </>
   );
@@ -758,7 +734,7 @@ export function ArticlePage({slug}:{slug:string}){
     <>
       {a ? (
         <>
-          {/* Cinematic Article Header */}
+          
           <section className="relative bg-[#050A18] overflow-hidden pt-40 pb-24 border-b border-white/10 mt-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-[#050A18] to-[#050A18] pointer-events-none"></div>
             <div className="container-shell relative z-10 max-w-4xl mx-auto">
@@ -777,7 +753,6 @@ export function ArticlePage({slug}:{slug:string}){
             </div>
           </section>
 
-          {/* Editorial Content */}
           <article className="container-shell section-space bg-background">
             <div className="max-w-3xl mx-auto">
               
@@ -823,7 +798,7 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
   const isPrivacy = kind === 'privacy';
   return (
     <>
-      {/* Cinematic Legal Hero */}
+      
       <section className="relative pt-32 pb-20 bg-[#050A18] overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10">
@@ -845,8 +820,7 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
       <section className="section-space bg-background">
         <div className="container-shell">
           <div className="flex flex-col md:flex-row gap-16 items-start">
-            
-            {/* Sticky Sidebar Navigation */}
+
             <aside className="w-full md:w-64 shrink-0 md:sticky md:top-32 flex flex-col gap-2">
               <Link href="/privacy" className={`px-5 py-4 rounded-xl text-sm font-medium transition-all ${isPrivacy ? 'bg-foreground text-background shadow-lg border border-border/50' : 'text-muted-foreground hover:bg-secondary/50 hover:text-foreground'}`}>
                 Privacy Policy
@@ -856,7 +830,6 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
               </Link>
             </aside>
 
-            {/* Legal Content */}
             <div className="flex-1 max-w-4xl text-muted-foreground leading-relaxed">
               {isPrivacy ? (
                 <div className="space-y-6">
@@ -950,10 +923,4 @@ export function LegalPage({kind}:{kind:'privacy'|'terms'}){
     </>
   );
 }
-
-
-
-
-
-
 

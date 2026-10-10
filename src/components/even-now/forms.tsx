@@ -82,7 +82,6 @@ function Field({label,name,type='text',required=false,wide=false,options,placeho
 const stages=['Business information','Business stage','Primary challenge','Current growth','Business problem','Your goal','Timeline','Diagnostic result'];
 const options=[[],['Established and growing','Growth has plateaued','Scaling into new markets','Launching an existing product'],['Unclear positioning','Not enough demand','Low conversion','Inconsistent sales','Low repeat purchases','New market entry'],[],[],[],['Within 30 days','Within 90 days','In 3-6 months','Exploring options']];
 
-
 const submitForm = async (data: Record<string, string>, formType: string) => {
   try {
     await fetch('/api/contact', {
@@ -118,7 +117,7 @@ export function AuditPage(){
 
   return (
     <>
-      {/* Cinematic Hero */}
+      
       <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
@@ -139,8 +138,7 @@ export function AuditPage(){
       <section className="section-space bg-secondary/10">
         <div className="container-shell">
           <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto">
-            
-            {/* Sticky Sidebar (Progress) */}
+
             <aside className="lg:w-1/3 shrink-0">
               <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-2xl relative overflow-hidden">
                 <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-gold">Strategic Clarity</h3>
@@ -165,8 +163,7 @@ export function AuditPage(){
                 </ol>
               </div>
             </aside>
-            
-            {/* Form & Result Container */}
+
             <div className="lg:w-2/3">
               <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border min-h-[650px] flex flex-col justify-center relative overflow-hidden">
                 
@@ -302,7 +299,7 @@ export function ProcurementPage(){
 
   return (
     <>
-      {/* Cinematic Hero */}
+      
       <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto">
@@ -327,8 +324,7 @@ export function ProcurementPage(){
           </div>
           
           <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto">
-            
-            {/* Sticky Sidebar */}
+
             <aside className="lg:w-1/3 shrink-0">
               <div className="sticky top-32 p-8 rounded-[2rem] bg-card text-foreground border border-border shadow-2xl relative overflow-hidden overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-3xl rounded-full"></div>
@@ -347,8 +343,7 @@ export function ProcurementPage(){
                 </div>
               </div>
             </aside>
-            
-            {/* Form Panel */}
+
             <div className="lg:w-2/3">
               <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border min-h-[650px] flex flex-col justify-center overflow-hidden">
                 <form onSubmit={advance} className="h-full flex flex-col">
@@ -449,7 +444,7 @@ export function ContactPage({need=''}:{need?:string}){
   const router = useRouter();
   return (
     <>
-      {/* Cinematic Hero */}
+      
       <section className="relative min-h-[45vh] flex flex-col items-center justify-center bg-[#050A18] overflow-hidden pt-32 pb-24 mt-10 border-b border-border">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl text-center mx-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
@@ -470,8 +465,7 @@ export function ContactPage({need=''}:{need?:string}){
       <section className="section-space bg-secondary/10">
         <div className="container-shell">
           <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto">
-            
-            {/* Sticky Sidebar */}
+
             <aside className="lg:w-1/3 shrink-0">
                 <div className="sticky top-32 p-10 rounded-3xl bg-card text-foreground border border-border shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-40 h-40 bg-gold/10 blur-3xl rounded-full"></div>
@@ -482,8 +476,7 @@ export function ContactPage({need=''}:{need?:string}){
                   </div>
                 </div>
               </aside>
-            
-            {/* Form Panel */}
+
             <div className="lg:w-2/3">
               <div className="bg-background rounded-3xl p-8 md:p-14 shadow-2xl border border-border animate-in fade-in slide-in-from-bottom-8 duration-700 min-h-[650px] flex flex-col justify-center">
                   <h2 className="text-3xl md:text-4xl font-medium mb-10 text-balance">Your Details</h2>
@@ -559,24 +552,4 @@ export function ThankYouPage({type}:{type:string}){
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -94,14 +94,13 @@ export function Site({children}:{children:ReactNode}) {
 export function Footer() {
   return (
     <footer className="bg-[#050A18] text-white pt-24 pb-8 border-t border-border/50 relative overflow-hidden mt-20">
-      {/* Subtle Background Glow */}
+      
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container-shell relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
-          
-          {/* Brand & Tagline */}
+
           <div className="lg:col-span-5 flex flex-col items-start">
             <Link href="/" className="inline-block hover:scale-105 transition-transform duration-300 origin-left mb-8 text-white">
               <Brand />
@@ -116,7 +115,6 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Links Grid */}
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
             
             <div className="flex flex-col gap-5">
@@ -164,7 +162,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-medium tracking-wide">
           <p>© {new Date().getFullYear()} Even Now. All rights reserved.</p>
           
