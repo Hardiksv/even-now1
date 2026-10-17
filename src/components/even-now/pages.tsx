@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { ArrowRight, ArrowUpRight, ArrowLeft, Check, Globe2, Settings, Wrench, Leaf, Shirt, Beaker, Package } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ArrowLeft, Check, Sparkles, Target, Compass, TrendingUp, Globe2, Settings, Wrench, Leaf, Shirt, Beaker, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Site, Intro, Eyebrow, Method, Diagnostics, FinalCTA } from './site';
 import port from '@/assets/commerce-port.jpg';
@@ -249,13 +249,12 @@ export function AboutPage() {
   const c = serviceContent.about;
   return (
     <>
-      
       <section className="relative min-h-[75vh] flex items-center bg-[#050A18] overflow-hidden py-32 mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
         <div className="container-shell relative z-10 w-full max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-4 mb-8">
             <span className="w-8 h-[1px] bg-gold"></span>
-            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">{c.tag}</span>
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gold">Vision · Mission · Founder's Purpose</span>
             <span className="w-8 h-[1px] bg-gold"></span>
           </div>
           <h1 className="text-5xl md:text-7xl font-medium leading-[1.05] tracking-tight mb-8 text-white text-balance drop-shadow-2xl">
@@ -264,17 +263,166 @@ export function AboutPage() {
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12 text-balance drop-shadow-md">
             {c.description}
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/contact" className="group relative flex items-center justify-center gap-3 bg-gold text-black px-10 h-16 rounded-full font-bold tracking-wide shadow-xl shadow-gold/20 hover:shadow-[0_0_40px_rgba(193,155,62,0.4)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <span className="relative z-10">Talk to Even Now</span>
               <ArrowUpRight className="relative z-10 group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={20}/>
               <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
             </Link>
+            <Link href="/audit" className="group flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/30 px-10 h-16 rounded-full font-bold tracking-wide backdrop-blur-md hover:scale-105 transition-all duration-300">
+              Request an Audit <ArrowUpRight className="group-hover:translate-x-1 transition-transform" size={20}/>
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Prominent Founder's Words Quote Block */}
+      <section className="section-space relative overflow-hidden bg-[#070D1E] text-white border-y border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/15 via-[#070D1E] to-[#070D1E] pointer-events-none"></div>
+        <div className="container-shell relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-4 mb-8">
+              <span className="w-8 h-[1px] bg-gold"></span>
+              <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-gold">Founder’s Words</span>
+              <span className="w-8 h-[1px] bg-gold"></span>
+            </div>
+            
+            <div className="relative mb-10">
+              <span className="text-7xl md:text-8xl font-serif text-gold/30 select-none block leading-none -mb-6">“</span>
+              <blockquote className="text-2xl md:text-4xl lg:text-[40px] font-medium leading-[1.3] tracking-tight text-white/95 text-balance">
+                Whatever the situation, whatever the past, and whatever bottlenecks your business is facing—in sales, marketing, conversions, or operations, Even Now, we can find a way forward. <span className="text-gold font-semibold">We can fix. We can grow. We can build. We can scale.</span>
+              </blockquote>
+              <span className="text-7xl md:text-8xl font-serif text-gold/30 select-none block leading-none -mt-4 text-right">”</span>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-[1px] bg-gold/50 mb-4"></div>
+              <p className="text-sm uppercase tracking-[0.2em] font-bold text-white">Even Now</p>
+              <p className="text-xs text-gray-400 mt-1">Founder’s Motto & Stated Goals</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder's Purpose Section */}
+      <section className="section-space bg-background border-b border-border/50">
+        <div className="container-shell">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="w-6 h-[1px] bg-gold"></span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Founder’s Purpose</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] tracking-tight mb-8 text-foreground">
+                Past challenges do not have to define your future.
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6 border-l-2 border-gold/40 pl-6">
+                Even Now was founded with a belief that a business’s past challenges do not have to define its future. Through consulting, auditing, collaboration, and connections between Indian and international businesses, the aim is to help companies move forward and contribute to a stronger Indian economy.
+              </p>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Every bottleneck in an enterprise—whether in brand positioning, demand generation, sales velocity, or supply chain procurement—holds an opportunity for transformation when diagnosed with objective precision.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-1 gap-6">
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">01</span>
+                  <h4 className="text-xl font-semibold">Auditing & Strategic Consulting</h4>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
+                  Diagnosing commercial constraints across sales, marketing, conversions, and operations before prescribing solutions.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">02</span>
+                  <h4 className="text-xl font-semibold">Indian & Global Bridge</h4>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
+                  Connecting qualified Indian manufacturing and service capabilities with international commercial buyers and scale partners.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">03</span>
+                  <h4 className="text-xl font-semibold">Strengthening the Economy</h4>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
+                  Fostering resilient commercial engines that generate lasting value, job creation, and tangible contributions to India’s economic growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission Full Section */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
+        <div className="container-shell">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="w-6 h-[1px] bg-gold"></span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Vision & Mission</span>
+              <span className="w-6 h-[1px] bg-gold"></span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] text-foreground">
+              Our Commitment to Enterprise Growth
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            {/* Vision Detailed Card */}
+            <div className="relative p-10 md:p-12 rounded-3xl bg-card border border-border hover:border-gold/40 transition-all duration-500 shadow-sm hover:shadow-xl group overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-bl-[120px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</span>
+                  <span className="text-xs font-mono font-bold px-3.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">7,000 Milestone</span>
+                </div>
+                <h3 className="text-3xl font-medium mb-6 text-foreground group-hover:text-gold transition-colors">
+                  To consult and audit 7,000 businesses across India and around the world.
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
+                </p>
+              </div>
+              <div className="relative z-10 pt-6 border-t border-border flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-muted-foreground">
+                <span>India & Global Scale</span>
+                <span className="text-gold">Targeted Impact</span>
+              </div>
+            </div>
+
+            {/* Mission Detailed Card */}
+            <div className="relative p-10 md:p-12 rounded-3xl bg-card border border-border hover:border-gold/40 transition-all duration-500 shadow-sm hover:shadow-xl group overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-bl-[120px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</span>
+                  <span className="text-xs font-mono font-bold px-3.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">Clear Execution</span>
+                </div>
+                <h3 className="text-3xl font-medium mb-6 text-foreground group-hover:text-gold transition-colors">
+                  To identify commercial challenges and turn them into practical scale strategies.
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  To identify the challenges holding businesses back across sales, marketing, conversions, and operations, then turn those findings into clear, practical strategies that help businesses improve, grow, build, and scale.
+                </p>
+              </div>
+              <div className="relative z-10 pt-6 border-t border-border flex flex-wrap gap-2">
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Fix</span>
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Grow</span>
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Build</span>
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Beliefs Section */}
+      <section className="section-space bg-secondary/10 border-b border-border/50">
         <div className="container-shell">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -302,6 +450,7 @@ export function AboutPage() {
         </div>
       </section>
 
+      {/* Who We Work With */}
       <section className="section-space bg-secondary/30">
         <div className="container-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

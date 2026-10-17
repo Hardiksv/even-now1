@@ -89,6 +89,18 @@ export function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container-shell relative z-10">
+        {/* Founder's Motto Closing Line */}
+        <div className="pb-14 mb-16 border-b border-white/10 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-3 mb-4">
+            <span className="w-6 h-[1px] bg-gold"></span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">The Even Now Motto</span>
+            <span className="w-6 h-[1px] bg-gold"></span>
+          </div>
+          <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed italic text-balance">
+            “Whatever the bottlenecks your business is facing, Even Now, we can find a way forward. <span className="text-gold font-normal not-italic">We can fix. We can grow. We can build. We can scale.</span>”
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
 
           <div className="lg:col-span-5 flex flex-col items-start">
@@ -153,7 +165,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-medium tracking-wide">
-          <p>Â© {new Date().getFullYear()} Even Now. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Even Now. All rights reserved.</p>
           
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
