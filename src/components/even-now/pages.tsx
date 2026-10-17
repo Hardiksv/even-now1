@@ -7,8 +7,8 @@ import { Site, Intro, Eyebrow, Method, Diagnostics, FinalCTA } from './site';
 import port from '@/assets/commerce-port.jpg';
 import leadership from '@/assets/leadership.jpg';
 import d2cPackaging from '@/assets/d2c-packaging.jpg';
-import shivayuLogo from '@/assets/shivayu-transparent.png';
-import decofixLogo from '@/assets/decofix-white.png';
+import shivayuLogo from '@/assets/shivayu-logo.png';
+import decofixLogo from '@/assets/decofix-logo.png';
 import {
   ApproachSixStageDiagram,
   CertificationTypographyBadges,
@@ -381,7 +381,7 @@ export function AboutPage() {
               <img 
                 src={shivayuLogo.src} 
                 alt="Shivayu Aerospace and Defence" 
-                className="h-6 sm:h-7 w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
+                className="h-6 sm:h-7 w-auto object-contain group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
               />
             </div>
 
@@ -393,7 +393,7 @@ export function AboutPage() {
               <img 
                 src={decofixLogo.src} 
                 alt="Decofix" 
-                className="h-6 sm:h-7 w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
+                className="h-6 sm:h-7 w-auto object-contain group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
               />
             </div>
           </div>
