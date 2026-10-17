@@ -347,19 +347,18 @@ export function AboutPage() {
       </section>
 
       {/* Founder's Purpose Section */}
-      <section className="section-space bg-background border-b border-border/50">
+      <section className="section-space bg-secondary/15 border-b border-border/50">
         <div className="container-shell">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-4 mb-6">
-              <span className="w-6 h-[1px] bg-gold"></span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Founder’s Purpose</span>
+            <div className="relative p-8 sm:p-12 md:p-14 rounded-3xl bg-card border border-border/80 shadow-md">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="w-6 h-[1px] bg-gold"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-gold">Founder’s Purpose</span>
+              </div>
+              <p className="text-xl md:text-2xl text-foreground font-normal leading-relaxed border-l-2 border-gold/60 pl-6 sm:pl-8">
+                Even Now was founded with a belief that a business’s past challenges do not have to define its future. Through consulting, auditing, collaboration, and connections between Indian and international businesses, the aim is to help companies move forward and contribute to a stronger Indian economy.
+              </p>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.2] tracking-tight mb-8 text-foreground">
-              A business’s past challenges do not have to define its future.
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed border-l-2 border-gold/40 pl-6">
-              Even Now was founded with a belief that a business’s past challenges do not have to define its future. Through consulting, auditing, collaboration, and connections between Indian and international businesses, the aim is to help companies move forward and contribute to a stronger Indian economy.
-            </p>
           </div>
         </div>
       </section>

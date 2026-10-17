@@ -171,11 +171,20 @@ export default function Page(){
     </Reveal>
    </section>
 
-      {/* Vision & Mission Section */}
+      {/* Vision & Mission Section (Concise Version) */}
    <section className="section-space bg-secondary/20 border-b border-border/50">
     <Reveal className="container-shell">
-      <div className="max-w-3xl mb-12">
-        <Eyebrow>Vision · Mission</Eyebrow>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <Eyebrow>Vision · Mission</Eyebrow>
+        </div>
+        <Link 
+          href="/about" 
+          className="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold/80 transition-colors group"
+        >
+          <span>Read the fuller story & founder’s purpose</span>
+          <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </Link>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -187,7 +196,7 @@ export default function Page(){
               <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</h3>
             </div>
             <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
-              To consult and audit 7,000 businesses across India and around the world—helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
+              To consult and audit 7,000 businesses across India and around the world—helping them overcome bottlenecks, unlock growth, and contribute to India’s economic progress.
             </p>
           </div>
         </div>
@@ -200,7 +209,7 @@ export default function Page(){
               <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</h3>
             </div>
             <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
-              To identify the challenges holding businesses back across sales, marketing, conversions, and operations, then turn those findings into clear, practical strategies that help businesses improve, grow, build, and scale.
+              To identify the challenges holding businesses back across sales, marketing, conversions, and operations, turning findings into clear, practical strategies to improve, grow, build, and scale.
             </p>
           </div>
         </div>
