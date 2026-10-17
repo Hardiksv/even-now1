@@ -278,7 +278,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Prominent Founder's Words Quote Block */}
+      {/* Founder’s Words */}
       <section className="section-space relative overflow-hidden bg-[#070D1E] text-white border-y border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/15 via-[#070D1E] to-[#070D1E] pointer-events-none"></div>
         <div className="container-shell relative z-10">
@@ -289,24 +289,19 @@ export function AboutPage() {
                 <Quote size={20} className="rotate-180" />
               </div>
 
-              <div className="inline-flex items-center gap-4 mb-6">
+              <div className="inline-flex items-center gap-4 mb-8">
                 <span className="w-8 h-[1px] bg-gold"></span>
                 <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-gold">Founder’s Words</span>
                 <span className="w-8 h-[1px] bg-gold"></span>
               </div>
 
-              <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-normal leading-[1.4] tracking-tight text-white/95 max-w-3xl mx-auto">
-                “Whatever the situation, whatever the past, and whatever bottlenecks your business is facing—in sales, marketing, conversions, or operations, Even Now, we can find a way forward.”
+              <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-normal leading-[1.5] tracking-tight text-white/95 max-w-3xl mx-auto">
+                “Whatever the situation, whatever the past, and whatever bottlenecks your business is facing—in sales, marketing, conversions, or operations, Even Now, we can find a way forward. <span className="text-gold font-semibold">We can fix. We can grow. We can build. We can scale.</span>”
               </blockquote>
-
-              <div className="mt-6 md:mt-8 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gold">
-                We can fix. We can grow. We can build. We can scale.
-              </div>
 
               <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center">
                 <div className="w-8 h-[1px] bg-gold/50 mb-3"></div>
                 <span className="font-sans font-bold tracking-[0.2em] text-sm uppercase flex items-center text-white">EVEN<span className="text-gold ml-1">NOW</span></span>
-                <p className="text-xs text-gray-400 mt-1">Founder’s Motto & Stated Goals</p>
               </div>
 
             </div>
@@ -317,54 +312,17 @@ export function AboutPage() {
       {/* Founder's Purpose Section */}
       <section className="section-space bg-background border-b border-border/50">
         <div className="container-shell">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="w-6 h-[1px] bg-gold"></span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Founder’s Purpose</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] tracking-tight mb-8 text-foreground">
-                Past challenges do not have to define your future.
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 border-l-2 border-gold/40 pl-6">
-                Even Now was founded with a belief that a business’s past challenges do not have to define its future. Through consulting, auditing, collaboration, and connections between Indian and international businesses, the aim is to help companies move forward and contribute to a stronger Indian economy.
-              </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Every bottleneck in an enterprise—whether in brand positioning, demand generation, sales velocity, or supply chain procurement—holds an opportunity for transformation when diagnosed with objective precision.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <span className="w-6 h-[1px] bg-gold"></span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Founder’s Purpose</span>
             </div>
-
-            <div className="grid sm:grid-cols-1 gap-6">
-              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">01</span>
-                  <h4 className="text-xl font-semibold">Auditing & Strategic Consulting</h4>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
-                  Diagnosing commercial constraints across sales, marketing, conversions, and operations before prescribing solutions.
-                </p>
-              </div>
-
-              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">02</span>
-                  <h4 className="text-xl font-semibold">Indian & Global Bridge</h4>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
-                  Connecting qualified Indian manufacturing and service capabilities with international commercial buyers and scale partners.
-                </p>
-              </div>
-
-              <div className="p-8 rounded-2xl bg-card border border-border hover:border-gold/30 transition-all duration-300 shadow-sm">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold font-mono text-sm">03</span>
-                  <h4 className="text-xl font-semibold">Strengthening the Economy</h4>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pl-12">
-                  Fostering resilient commercial engines that generate lasting value, job creation, and tangible contributions to India’s economic growth.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.2] tracking-tight mb-8 text-foreground">
+              A business’s past challenges do not have to define its future.
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed border-l-2 border-gold/40 pl-6">
+              Even Now was founded with a belief that a business’s past challenges do not have to define its future. Through consulting, auditing, collaboration, and connections between Indian and international businesses, the aim is to help companies move forward and contribute to a stronger Indian economy.
+            </p>
           </div>
         </div>
       </section>
@@ -405,62 +363,37 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Vision & Mission Full Section */}
+      {/* Vision & Mission Section */}
       <section className="section-space bg-secondary/20 border-b border-border/50">
         <div className="container-shell">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="w-6 h-[1px] bg-gold"></span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gold">Vision & Mission</span>
-              <span className="w-6 h-[1px] bg-gold"></span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] text-foreground">
-              Our Commitment to Enterprise Growth
-            </h2>
+          <div className="max-w-4xl mx-auto mb-12">
+            <Eyebrow>Vision · Mission</Eyebrow>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            {/* Vision Detailed Card */}
-            <div className="relative p-10 md:p-12 rounded-3xl bg-card border border-border hover:border-gold/40 transition-all duration-500 shadow-sm hover:shadow-xl group overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-bl-[120px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700 pointer-events-none"></div>
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-8">
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</span>
-                  <span className="text-xs font-mono font-bold px-3.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">7,000 Milestone</span>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Vision */}
+            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="w-6 h-[1px] bg-gold"></span>
+                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</h3>
                 </div>
-                <h3 className="text-3xl font-medium mb-6 text-foreground group-hover:text-gold transition-colors">
-                  To consult and audit 7,000 businesses across India and around the world.
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
+                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
+                  To consult and audit 7,000 businesses across India and around the world—helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
                 </p>
-              </div>
-              <div className="relative z-10 pt-6 border-t border-border flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-muted-foreground">
-                <span>India & Global Scale</span>
-                <span className="text-gold">Targeted Impact</span>
               </div>
             </div>
 
-            {/* Mission Detailed Card */}
-            <div className="relative p-10 md:p-12 rounded-3xl bg-card border border-border hover:border-gold/40 transition-all duration-500 shadow-sm hover:shadow-xl group overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-bl-[120px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700 pointer-events-none"></div>
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-8">
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</span>
-                  <span className="text-xs font-mono font-bold px-3.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">Clear Execution</span>
+            {/* Mission */}
+            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="w-6 h-[1px] bg-gold"></span>
+                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</h3>
                 </div>
-                <h3 className="text-3xl font-medium mb-6 text-foreground group-hover:text-gold transition-colors">
-                  To identify commercial challenges and turn them into practical scale strategies.
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
                   To identify the challenges holding businesses back across sales, marketing, conversions, and operations, then turn those findings into clear, practical strategies that help businesses improve, grow, build, and scale.
                 </p>
-              </div>
-              <div className="relative z-10 pt-6 border-t border-border flex flex-wrap gap-2">
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Fix</span>
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Grow</span>
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Build</span>
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 bg-secondary rounded-md border border-border text-foreground">We Can Scale</span>
               </div>
             </div>
           </div>
