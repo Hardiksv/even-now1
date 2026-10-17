@@ -278,6 +278,43 @@ export function AboutPage() {
         </div>
       </section>
 
+            {/* Vision & Mission Section */}
+      <section className="section-space bg-secondary/20 border-b border-border/50">
+        <div className="container-shell">
+          <div className="max-w-4xl mx-auto mb-12">
+            <Eyebrow>Vision · Mission</Eyebrow>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Vision */}
+            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="w-6 h-[1px] bg-gold"></span>
+                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</h3>
+                </div>
+                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
+                  To consult and audit 7,000 businesses across India and around the world—helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
+                </p>
+              </div>
+            </div>
+
+            {/* Mission */}
+            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="w-6 h-[1px] bg-gold"></span>
+                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</h3>
+                </div>
+                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
+                  To identify the challenges holding businesses back across sales, marketing, conversions, and operations, then turn those findings into clear, practical strategies that help businesses improve, grow, build, and scale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founder’s Words */}
       <section className="section-space relative overflow-hidden bg-[#070D1E] text-white border-y border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/15 via-[#070D1E] to-[#070D1E] pointer-events-none"></div>
@@ -327,7 +364,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Selected Clients Showcase in About */}
+{/* Selected Clients Showcase in About */}
       <section className="py-10 bg-[#060C1B] border-b border-border/50">
         <div className="container-shell flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
@@ -358,43 +395,6 @@ export function AboutPage() {
                 alt="Decofix" 
                 className="h-6 sm:h-7 w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision & Mission Section */}
-      <section className="section-space bg-secondary/20 border-b border-border/50">
-        <div className="container-shell">
-          <div className="max-w-4xl mx-auto mb-12">
-            <Eyebrow>Vision · Mission</Eyebrow>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Vision */}
-            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-3 mb-6">
-                  <span className="w-6 h-[1px] bg-gold"></span>
-                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Vision</h3>
-                </div>
-                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
-                  To consult and audit 7,000 businesses across India and around the world—helping them overcome bottlenecks, unlock growth, and build stronger businesses that contribute to India’s economic progress.
-                </p>
-              </div>
-            </div>
-
-            {/* Mission */}
-            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-3 mb-6">
-                  <span className="w-6 h-[1px] bg-gold"></span>
-                  <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-gold">Mission</h3>
-                </div>
-                <p className="text-lg md:text-xl text-foreground font-normal leading-relaxed">
-                  To identify the challenges holding businesses back across sales, marketing, conversions, and operations, then turn those findings into clear, practical strategies that help businesses improve, grow, build, and scale.
-                </p>
-              </div>
             </div>
           </div>
         </div>
