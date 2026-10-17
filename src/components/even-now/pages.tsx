@@ -305,7 +305,7 @@ export function AboutPage() {
 
               <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center">
                 <div className="w-8 h-[1px] bg-gold/50 mb-3"></div>
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-white">EVEN NOW</p>
+                <span className="font-sans font-bold tracking-[0.2em] text-sm uppercase flex items-center text-white">EVEN<span className="text-gold ml-1">NOW</span></span>
                 <p className="text-xs text-gray-400 mt-1">Founder’s Motto & Stated Goals</p>
               </div>
 
