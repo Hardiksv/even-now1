@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, ChevronRight, Globe2, ChartNoAxesCombined, Sparkles, Building2, TrendingUp, Compass } from 'lucide-react';
+import { ArrowUpRight, Quote, ChevronRight, Globe2, ChartNoAxesCombined, Sparkles, Building2, TrendingUp, Compass } from 'lucide-react';
 import { Eyebrow, Reveal } from '@/components/even-now/site';
 import { HeroNetworkAnimation, GlobalMapSVG } from '@/components/even-now/visuals';
 import leadership from '@/assets/leadership.jpg';
@@ -159,25 +159,33 @@ export default function Page(){
    <section className="section-space relative overflow-hidden bg-[#050A18] text-white border-y border-white/10">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/15 via-[#050A18] to-[#050A18] pointer-events-none"></div>
     <div className="container-shell relative z-10">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-flex items-center gap-4 mb-8">
-          <span className="w-8 h-[1px] bg-gold"></span>
-          <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-gold">Founder’s Words</span>
-          <span className="w-8 h-[1px] bg-gold"></span>
-        </div>
-        
-        <div className="relative mb-10">
-          <span className="text-7xl md:text-8xl font-serif text-gold/30 select-none block leading-none -mb-6">“</span>
-          <blockquote className="text-2xl md:text-4xl lg:text-[40px] font-medium leading-[1.3] tracking-tight text-white/95 text-balance">
-            Whatever the situation, whatever the past, and whatever bottlenecks your business is facing—in sales, marketing, conversions, or operations, Even Now, we can find a way forward. <span className="text-gold font-semibold">We can fix. We can grow. We can build. We can scale.</span>
-          </blockquote>
-          <span className="text-7xl md:text-8xl font-serif text-gold/30 select-none block leading-none -mt-4 text-right">”</span>
-        </div>
+      <div className="max-w-4xl mx-auto">
+        <div className="relative rounded-3xl border border-gold/20 bg-gradient-to-b from-[#0B1530]/80 via-[#070D1E]/90 to-[#050A18] p-8 sm:p-12 md:p-16 text-center shadow-2xl backdrop-blur-sm">
+          
+          <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mx-auto mb-6 shadow-[0_0_20px_rgba(193,155,62,0.2)]">
+            <Quote size={20} className="rotate-180" />
+          </div>
 
-        <div className="flex flex-col items-center">
-          <div className="w-12 h-[1px] bg-gold/50 mb-4"></div>
-          <p className="text-sm uppercase tracking-[0.2em] font-bold text-white">Even Now</p>
-          <p className="text-xs text-gray-400 mt-1">Founder’s Motto & Purpose</p>
+          <div className="inline-flex items-center gap-4 mb-6">
+            <span className="w-8 h-[1px] bg-gold"></span>
+            <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-gold">Founder’s Words</span>
+            <span className="w-8 h-[1px] bg-gold"></span>
+          </div>
+
+          <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-normal leading-[1.4] tracking-tight text-white/95 max-w-3xl mx-auto">
+            “Whatever the situation, whatever the past, and whatever bottlenecks your business is facing—in sales, marketing, conversions, or operations, Even Now, we can find a way forward.”
+          </blockquote>
+
+          <div className="mt-6 md:mt-8 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gold">
+            We can fix. We can grow. We can build. We can scale.
+          </div>
+
+          <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center">
+            <div className="w-8 h-[1px] bg-gold/50 mb-3"></div>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white">EVEN NOW</p>
+            <p className="text-xs text-gray-400 mt-1">Founder’s Motto & Purpose</p>
+          </div>
+
         </div>
       </div>
     </div>
