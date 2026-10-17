@@ -7,8 +7,8 @@ import { Site, Intro, Eyebrow, Method, Diagnostics, FinalCTA } from './site';
 import port from '@/assets/commerce-port.jpg';
 import leadership from '@/assets/leadership.jpg';
 import d2cPackaging from '@/assets/d2c-packaging.jpg';
-import shivayuLogo from '@/assets/shivayu-logo.png';
-import decofixLogo from '@/assets/decofix-logo.png';
+import shivayuLogo from '@/assets/shivayu-transparent.png';
+import decofixLogo from '@/assets/decofix-white.png';
 import {
   ApproachSixStageDiagram,
   CertificationTypographyBadges,
@@ -370,34 +370,36 @@ export function AboutPage() {
       </section>
 
       {/* Selected Clients Showcase in About */}
-      <section className="py-12 bg-[#060C1B] border-b border-border/50">
-        <div className="container-shell flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="py-10 bg-[#060C1B] border-b border-border/50">
+        <div className="container-shell flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold block mb-2">Selected Clients</span>
-            <h3 className="text-2xl font-medium text-foreground">Trusted by Leading Enterprises</h3>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold block mb-1">Selected Clients</span>
+            <h3 className="text-xl md:text-2xl font-medium text-foreground">Trusted by Leading Enterprises</h3>
           </div>
           
-          <div className="flex flex-wrap items-center gap-5">
+          <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
             {/* Shivayu */}
-            <div className="flex items-center gap-4 px-5 py-3 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm">
-              <div className="h-8 md:h-9 flex items-center justify-center overflow-hidden rounded-lg bg-[#003893] p-1.5 shadow-sm">
-                <img src={shivayuLogo.src} alt="Shivayu Aerospace and Defence" className="h-full w-auto object-contain" />
-              </div>
-              <div className="border-l border-border pl-3">
-                <p className="text-xs font-bold text-foreground">Shivayu</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Aerospace & Defence</p>
-              </div>
+            <div 
+              title="Shivayu Aerospace & Defence"
+              className="group flex items-center justify-center h-12 sm:h-14 px-6 sm:px-8 rounded-2xl bg-card border border-border hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(193,155,62,0.15)] hover:-translate-y-0.5 cursor-pointer"
+            >
+              <img 
+                src={shivayuLogo.src} 
+                alt="Shivayu Aerospace and Defence" 
+                className="h-6 sm:h-7 w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
+              />
             </div>
 
             {/* Decofix */}
-            <div className="flex items-center gap-4 px-5 py-3 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm">
-              <div className="h-8 md:h-9 flex items-center justify-center overflow-hidden rounded-lg bg-white px-2.5 py-1 shadow-sm">
-                <img src={decofixLogo.src} alt="Decofix" className="h-full w-auto object-contain" />
-              </div>
-              <div className="border-l border-border pl-3">
-                <p className="text-xs font-bold text-foreground">Decofix®</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Adhesives & Materials</p>
-              </div>
+            <div 
+              title="Decofix"
+              className="group flex items-center justify-center h-12 sm:h-14 px-6 sm:px-8 rounded-2xl bg-card border border-border hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(193,155,62,0.15)] hover:-translate-y-0.5 cursor-pointer"
+            >
+              <img 
+                src={decofixLogo.src} 
+                alt="Decofix" 
+                className="h-6 sm:h-7 w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" 
+              />
             </div>
           </div>
         </div>
