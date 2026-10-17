@@ -7,6 +7,8 @@ import { Site, Intro, Eyebrow, Method, Diagnostics, FinalCTA } from './site';
 import port from '@/assets/commerce-port.jpg';
 import leadership from '@/assets/leadership.jpg';
 import d2cPackaging from '@/assets/d2c-packaging.jpg';
+import shivayuLogo from '@/assets/shivayu-logo.png';
+import decofixLogo from '@/assets/decofix-logo.png';
 import {
   ApproachSixStageDiagram,
   CertificationTypographyBadges,
@@ -361,6 +363,40 @@ export function AboutPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed pl-12">
                   Fostering resilient commercial engines that generate lasting value, job creation, and tangible contributions to India’s economic growth.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Selected Clients Showcase in About */}
+      <section className="py-12 bg-[#060C1B] border-b border-border/50">
+        <div className="container-shell flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold block mb-2">Selected Clients</span>
+            <h3 className="text-2xl font-medium text-foreground">Trusted by Leading Enterprises</h3>
+          </div>
+          
+          <div className="flex flex-wrap items-center gap-5">
+            {/* Shivayu */}
+            <div className="flex items-center gap-4 px-5 py-3 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm">
+              <div className="h-8 md:h-9 flex items-center justify-center overflow-hidden rounded-lg bg-[#003893] p-1.5 shadow-sm">
+                <img src={shivayuLogo.src} alt="Shivayu Aerospace and Defence" className="h-full w-auto object-contain" />
+              </div>
+              <div className="border-l border-border pl-3">
+                <p className="text-xs font-bold text-foreground">Shivayu</p>
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Aerospace & Defence</p>
+              </div>
+            </div>
+
+            {/* Decofix */}
+            <div className="flex items-center gap-4 px-5 py-3 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 shadow-sm">
+              <div className="h-8 md:h-9 flex items-center justify-center overflow-hidden rounded-lg bg-white px-2.5 py-1 shadow-sm">
+                <img src={decofixLogo.src} alt="Decofix" className="h-full w-auto object-contain" />
+              </div>
+              <div className="border-l border-border pl-3">
+                <p className="text-xs font-bold text-foreground">Decofix®</p>
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Adhesives & Materials</p>
               </div>
             </div>
           </div>
